@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical"
+    tools:context="gov.android.com.superior.advice.AdviceActivity">
+
+
+    <EditText android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:lines="8"
+        android:gravity="top|left"
+        android:hint="请填写您的意见建议"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:padding="15dp"
+        android:clickable="true"
+        android:onClick="adviceClick"
+        android:text="提交" >
+    </TextView>
+
+</LinearLayout>

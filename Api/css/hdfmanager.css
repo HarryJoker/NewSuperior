@@ -1,0 +1,60 @@
+@charset "UTF-8";
+.p_bar {
+    clear: both;
+    line-height: normal;
+  }
+  .p_bar a {
+      float: left;
+      padding: 4px 4px 2px 4px;
+      font-size: 12px;
+      color: #333;
+      line-height: 14px;
+      text-decoration: none;
+  }
+  .p_bar a.p_num {
+      background-color: #FFFFFF;
+      border: 1px #CCC solid;
+      margin-right: 4px;
+  }
+  .p_bar a:hover.p_num {
+      background-color: #DDE9F5;
+      border: 1px #CEE1F0 solid;
+      text-decoration: none;
+  }
+  .p_bar a.p_curpage {
+      padding: 5px 4px 2px 4px;
+      border-style: none;
+      margin-right: 4px;
+      font-weight: bold;
+  }
+  .p_bar a.p_text {
+      background-color: #FFFFFF;
+      border: 1px #CCC solid;
+      margin-right: 4px;
+  }
+  .p_bar input {
+      float: left;
+      margin-right: 4px;
+      font-size: 12px;
+      line-height: 12px;
+      padding: 2px 0px 0px 4px;
+      border: 1px #CCC solid;
+      width: 22px;
+      height: 18px
+  }
+
+  .p_bar button {
+      float: left;
+      height: 22px;
+      padding: 1px;
+      border: 1px #CCC solid;
+      width: 25px;
+      line-height: 14px;
+      font-size: 12px;
+      font-weight: bold;
+      background-color: #FFFFFF;
+  }
+  .p_bar button:hover {
+      background-color: #DDE9F5;
+      border: 1px #CEE1F0 solid;
+  }

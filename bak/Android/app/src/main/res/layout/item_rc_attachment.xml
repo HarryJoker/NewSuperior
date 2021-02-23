@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_vertical_top"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@color/lightgray" />
+
+        <cn.carbs.android.avatarimageview.library.AvatarImageView
+            android:id="@+id/lv_logo"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:elevation="@dimen/dp_2"
+            android:src="@mipmap/icon_mayun"
+            app:aiv_BoarderColor="@color/lightgray"
+            app:aiv_BoarderWidth="2dp"
+            app:aiv_ShowBoarder="true"
+            app:aiv_TextColor="@color/colorPrimary"
+            app:aiv_TextSizeRatio="0.4" />
+
+        <TextView
+            android:id="@+id/tv_unit_name"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:gravity="center"
+            android:text="锦秋街道办事处"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp_10" />
+
+        <TextView
+            android:id="@+id/tv_vertical_bottom"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@color/lightgray" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_trace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:background="@drawable/shape_layer_gray"
+        android:elevation="@dimen/dp_2"
+        android:orientation="vertical">
+
+        <com.lid.lib.LabelTextView
+            android:id="@+id/tv_trace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:padding="@dimen/dp_10"
+
+            android:text="trace ................"
+            android:textColor="@color/darkText"
+            android:textSize="@dimen/sp_14"
+            app:label_backgroundColor="#70F14949"
+            app:label_distance="@dimen/dp_20"
+            app:label_height="@dimen/dp_20"
+            app:label_orientation="RIGHT_TOP"
+            app:label_strokeColor="@color/orangered"
+            app:label_strokeWidth="@dimen/dp_1"
+
+            app:label_text="哈哈哈"
+            app:label_textColor="#E23939"
+            app:label_textSize="@dimen/sp_10" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rc_attachment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:background="@color/lightgray" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:text="创建时间：2019-9-21"
+            android:textColor="@color/darkgray"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

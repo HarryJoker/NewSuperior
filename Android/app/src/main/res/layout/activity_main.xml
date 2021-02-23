@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_140" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/avatar_default_border"/>
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/common_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:background="@color/white"
+        app:tl_iconHeight="@dimen/dp_23"
+        app:tl_iconWidth="@dimen/dp_23"
+        app:tl_indicator_color="@color/colorPrimary"
+        app:tl_indicator_height="0dp"
+        app:tl_textSelectColor="@color/colorPrimary"
+        app:tl_textUnselectColor="#66000000"
+        app:tl_textsize="@dimen/sp_14"
+        app:tl_underline_color="#DDDDDD"
+        app:tl_underline_height="@dimen/dp_1" />
+</LinearLayout>

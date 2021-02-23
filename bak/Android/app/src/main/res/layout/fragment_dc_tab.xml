@@ -1,0 +1,111 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="gov.android.com.superior.home.supervise.TabFragment">
+
+
+    <com.harry.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="pullFromStart" >
+
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                app:title_background="#7777"
+                android:layout_width="match_parent"
+                android:layout_height="140dp" />
+            <LinearLayout android:id="@+id/layout_title"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:padding="5dp"
+                android:background="#dfdede"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView android:text="|"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView android:text="待审任务"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView android:text="  >  "
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:gravity="right"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <gov.android.com.superior.view.NestListView
+                android:id="@+id/lv_verify"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </gov.android.com.superior.view.NestListView>
+
+            <!--<LinearLayout android:orientation="horizontal"-->
+                <!--android:padding="5dp"-->
+                <!--android:clickable="true"-->
+                <!--android:onClick="acceptedClick"-->
+                <!--android:background="#dfdede"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<TextView android:text="|"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textSize="22sp"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+                <!--<TextView android:text="任务列表"-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+                <!--<TextView android:text="  >  "-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textSize="22sp"-->
+                    <!--android:gravity="right"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--<gov.android.com.superior.view.NestListView-->
+                <!--android:id="@+id/lv_task"-->
+                <!--android:background="@color/white"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+            <!--</gov.android.com.superior.view.NestListView>-->
+
+        </LinearLayout>
+    </com.harry.pulltorefresh.library.PullToRefreshScrollView>
+
+</FrameLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="主要负责人："
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_leader"
+                android:background="@drawable/shape_border"
+                android:padding="@dimen/dp_5"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp_14"
+                android:layout_height="wrap_content"
+                android:hint="请填写主要负责人" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分管负责人："
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_parter"
+                android:background="@drawable/shape_border"
+                android:padding="@dimen/dp_5"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp_14"
+                android:layout_height="wrap_content"
+                android:hint="请填写分管负责人" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="具体责任人："
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_doer"
+                android:background="@drawable/shape_border"
+                android:padding="@dimen/dp_5"
+                android:layout_width="0dp"
+                android:textSize="@dimen/sp_14"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="请填写具体负责人" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@color/colorPrimary"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="acceptClick"
+        android:padding="13dp"
+        android:text="领取任务"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+</LinearLayout>
+

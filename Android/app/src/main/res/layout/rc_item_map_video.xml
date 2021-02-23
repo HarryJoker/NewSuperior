@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.android.dahua.dhplaycomponent.windowcomponent.window.PlayWindow
+        android:id="@+id/play_window"
+        Cloud_DownImage="mipmap/play_online_ani_ptz_down_h"
+        Cloud_InImage="mipmap/play_online_ani_ptz_body_reduce"
+        Cloud_LeftDownImage="mipmap/play_online_ani_ptz_leftdown_h"
+        Cloud_LeftImage="mipmap/play_online_ani_ptz_left_h"
+        Cloud_LeftUpImage="mipmap/play_online_ani_ptz_leftup_h"
+        Cloud_OutImage="mipmap/play_online_ani_ptz_body_enlarge"
+        Cloud_RightDownImage="mipmap/play_online_ani_ptz_rightdown_h"
+        Cloud_RightImage="mipmap/play_online_ani_ptz_right_h"
+        Cloud_RightUpImage="mipmap/play_online_ani_ptz_rightup_h"
+        Cloud_UpImage="mipmap/play_online_ani_ptz_up_h"
+        Focus_SurfaceBG="#AA414D5B"
+        Focus_ToolbarBG="#829EBF"
+        Normal_SurfaceBG="#414D5B"
+        Normal_ToolbarBG="#A6ADB6"
+        Open_Image="mipmap/play_online_video_bg"
+        PlayWinBG="#000000"
+        Reflash_Image="mipmap/play_module_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+</LinearLayout>

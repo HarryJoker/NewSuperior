@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_10">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/dp_36"
+            android:layout_height="@dimen/dp_36"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_avatar"
+            app:riv_border_color="@color/avatar_default_border"
+            app:riv_border_width="@dimen/dp_0_5"
+            app:riv_corner_radius="@dimen/dp_18" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="李三"
+            android:textColor="@color/color_66"
+            android:textSize="@dimen/sp_11" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/rb_score"
+            style="@style/Widget.MaterialRatingBar.RatingBar"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_20" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="全县有到位资金的招商引资项目14个，认定到位资金8.77亿元。其中，新建项目2个，续建项目12个。今年新批2家外资企业：滨州尤科生物科技有限公司和山东美可达电子影像有限公司。"
+            android:textColor="@color/dimgray"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="right"
+            android:text="2020-09-13 11:34:54"
+            android:textColor="@color/color_cc" />
+
+    </LinearLayout>
+
+</LinearLayout>

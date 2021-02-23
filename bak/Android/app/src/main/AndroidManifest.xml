@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gov.android.com.superior"
+    android:versionCode="2"
+    android:versionName="2.0.1">
+    <!-- 华为手机更新应用桌面角标需要的权限 -->
+    <!-- 有些华为机型需要增加网络权限才可以正常设置角标，例如华为 mate9 -->
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.TYPE_SYSTEM_ALERT" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".SuperiorApplicaiton"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.mm.dss.demo.LoadingActivity"></activity>
+        <activity android:name=".trace.NewReportTraceActivity" />
+        <activity android:name=".trace.TraceDetailActivity" />
+        <activity android:name=".task.detail.TaskDetailActivity" />
+        <activity android:name=".trace.NewAcceptActivity" />
+        <activity android:name=".trace.NewLeaderTraceActivity" />
+        <activity android:name=".trace.VerifyTraceActivity" />
+        <activity android:name=".trace.VerifyContentActivity" />
+        <activity android:name=".trace.NewContentActivity" />
+        <activity android:name=".setup.CacheActivity" />
+        <activity android:name=".user.UnitActivity" />
+        <activity android:name=".message.MessageListActivity" />
+        <activity android:name=".task.month.TaskMonthActivity" />
+        <activity android:name=".task.detail.UnitTaskActivity" />
+        <activity android:name=".task.list.TaskListActivity" />
+        <activity
+            android:name=".PaintActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- <service -->
+        <!-- android:name="cn.jpush.android.service.PushService" -->
+        <!-- android:process=":multiprocess" -->
+        <!-- tools:node="replace"> -->
+        <!-- </service> -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".login.GestureLockActivity" />
+        <activity android:name=".login.GestureLockLoginActivity" />
+        <activity android:name=".login.RegisterActivity" />
+        <activity android:name=".login.LoginActivity" />
+        <activity
+            android:name=".user.CreateUserActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity android:name=".about.AboutActivity" />
+        <activity android:name=".change.ChangeUnitActivity" />
+        <activity android:name=".advice.AdviceActivity" />
+        <activity
+            android:name=".MainUnitActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainDcActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainFxzActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainXzActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".home.unit.task.TaskListActivity" />
+        <activity android:name=".home.unit.task.TaskActivity" />
+        <activity android:name=".home.unit.task.TaskTraceActivity" />
+        <activity android:name=".home.unit.task.NewTraceActivity" /> <!-- 高德定位开发者申请的key -->
+        <!-- <meta-data android:name="superior" android:value="448c1e218fb67cc92704ed35a086669e"/> -->
+        <activity android:name=".home.supervise.TraceListActivity" />
+        <activity android:name=".home.supervise.VerifyActivity" />
+        <activity
+            android:name=".TransitionActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".message.MessageActivity" />
+        <activity android:name=".home.unit.task.ReplyTraceActivity" />
+        <activity android:name=".home.supervise.ReportActivity" />
+        <activity android:name=".home.subofficial.ReportActivity" />
+        <activity android:name=".gather.GatherDetailActivity" />
+        <activity android:name=".gather.GatherActivity" />
+        <activity android:name=".home.unit.task.TraceActivity" />
+        <activity android:name=".home.unit.task.TaskDetailActivity" />
+
+        <receiver
+            android:name=".receiver.PushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="gov.android.com.superior" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="59afd0823eae253869000708" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="UMENG" />
+
+        <activity android:name=".banner.BannerActivity" />
+        <activity android:name=".search.SearchActivity" />
+        <activity android:name=".search.SearchListActivity" />
+
+
+
+        <activity
+            android:name="com.mm.dss.demo.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mm.dss.demo.PlayOnlineActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mm.dss.demo.PlayBackActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mm.dss.demo.permission.core.PermissionActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+
+    </application>
+
+</manifest>

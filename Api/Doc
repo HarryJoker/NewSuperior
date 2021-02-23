@@ -1,0 +1,100 @@
+// status状态：
+// 0:未领取（发布任务后默认生成一条占位trace的状态）
+// 1:已领取 （领取任务）
+// 2:已逾期
+// 3:系统催报
+// 4:督查催报
+// 5:领导批示
+// 6:已报送（报送完成/未审核）
+// 7:退回重报
+// 8:审核正常
+// 9:审核缓慢
+// 10:审核较快
+// 11:调度完成
+
+
+//皇帝
+insert into `tbl_unit` ( `role`, `id`, `name`) values ( '1', '1000', '唐朝李世民');
+insert into `tbl_unit` ( `role`, `id`, `name`) values ( '2', '1001', '唐朝宰相0');
+insert into `tbl_unit` ( `role`, `id`, `name`) values ( '2', '10011', '唐朝宰相1');
+insert into `tbl_unit` ( `role`, `id`, `name`) values ( '2', '10012', '唐朝宰相2');
+insert into `tbl_unit` ( `role`, `id`, `name`) values ( '2', '10013', '唐朝宰相3');
+
+
+insert into `tbl_unit` ( `role`, `id`, `name`) values ( '3', '1002', '天庭玉帝');
+
+insert into `tbl_unit` ( `role`, `id`, `name`) values ( '4', '1003', '红楼梦');
+insert into `tbl_unit` ( `role`, `id`, `name`) values ( '4', '1004', '西游记');
+
+
+//下诏取经
+insert into `tbl_task` (`leaderUnitId`, `plan`, `planDetail`, `category`, `reportDate`, `year`, `reportType`, `name`, `id`) values ( 1001, '会历经九九八十一难，搞不死你们就成仙了', '', '1', '11月28', '2019', '2', '去西天找佛祖取经，造福天下 ', '30');
+
+
+
+//大战牛魔王
+insert into `tbl_childtask` ( `unitId`, `category`, `accept`, `name`, `unitName`, `taskId`) values ( '1004', '1', '1','孙悟空你去给我弄死牛魔王，把它媳妇弄过来','西游记', '30');
+
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('29', '未领取', '1', '1', 0);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('29', '孙悟空，悟性孙，孙行无', '1', '1', 1);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('29', '在打不死弄死你们', '1', '1', 2);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('29', '到时时间了', '1', '1',3);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('29', '师傅催你要牛魔王媳妇了', '1', '1', 4);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('29', '观音出现来指点一二了', '1', '1', 5);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('29', '师傅，牛魔王媳妇铁扇公主给您弄来了', '1', '1', 6);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('29', '太他妈丑了，给我带回去画个妆再来', '1', '1', 7);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('29', '师傅，画好妆的铁扇公主来了', '1', '1', 6);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('29', '放我卧室里，退下吧', '1', '1', 8);
+
+
+
+//大战白骨精
+insert into `tbl_childtask` ( `unitId`, `category`, `accept`, `name`, `unitName`, `taskId`) values ( '1004', '1', '1','孙悟空你去给我把白骨精弄过来','西游记', '30');
+
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('30', '未领取', '1', '1', 0);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('30', '孙悟空，悟性孙，孙行无', '1', '1', 1);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('30', '在打不死弄死你们', '1', '1', 2);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('30', '到时时间了', '1', '1',3);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('30', '师傅催你要白骨精了', '1', '1', 4);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('30', '观音出现来指点一二了', '1', '1', 5);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('30', '师傅，白骨精给您弄来了', '1', '1', 6);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('30', '太他妈丑了，给我带回去画个妆再来', '1', '1', 7);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('30', '师傅，画好妆的白骨精主来了', '1', '1', 6);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('30', '放我卧室里，退下吧', '1', '1', 8);
+
+
+
+//大战白骨精
+insert into `tbl_childtask` ( `unitId`, `category`, `accept`, `name`, `unitName`, `taskId`) values ( '1004', '1', '1','孙悟空你去给我把女儿国国王弄过来','西游记', '30');
+
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('31', '未领取', '1', '1', 0);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('31', '孙悟空，悟性孙，孙行无', '1', '1', 1);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('31', '在打不死弄死你们', '1', '1', 2);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('31', '到时时间了', '1', '1',3);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('31', '师傅催你要白骨精了', '1', '1', 4);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('31', '观音出现来指点一二了', '1', '1', 5);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('31', '师傅，女儿国国王给您弄来了', '1', '1', 6);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('31', '太他妈丑了，给我带回去画个妆再来', '1', '1', 7);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('31', '师傅，画好妆的女儿国国王来了', '1', '1', 6);
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('31', '放我卧室里，退下吧', '1', '1', 8);
+
+
+//上报领导
+insert into `avatar_gov_new`.`tbl_reporttask` ( `category`, `unitTaskId`, `leaderUnitId`) values ( '1', '3', '1000');
+
+
+
+
+//下诏红楼梦
+insert into `tbl_task` (`leaderUnitId`, `plan`, `planDetail`, `category`, `reportDate`, `year`, `reportType`, `name`, `id`) values ( 10011, '会历经九九八十一难，搞不死你们就成仙了', '', '1', '11月28', '2019', '2', '红楼梦，薛宝钗等等。。。 ', '33');
+insert into `tbl_childtask` ( `unitId`, `category`, `accept`, `name`, `unitName`, `taskId`) values ( '1004', '1', '0','薛宝钗想干林黛玉。。。。。。', '西游记', '33');
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('33', '未领取', '1', '1', 0);
+
+insert into `tbl_childtask` ( `unitId`, `category`, `accept`, `name`, `unitName`, `taskId`) values ( '1004', '1', '0','林黛玉想xxxxx薛宝钗想干。。。。。。', '西游记', '33');
+insert into `tbl_trace` (`childTaskId`, `content`, `category`, `type`, `status`) values ('34', '未领取', '1', '1', 0);
+
+
+
+insert into `tbl_task` (`leaderUnitId`, `plan`, `planDetail`, `category`, `reportDate`, `year`, `reportType`, `name`, `id`) values ( 10012, '会历经九九八十一难，搞不死你们就成仙了', '', '1', '11月28', '2019', '2', '论语孔孟等的伟人。。。。。 ', '32');
+
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<!--    <com.kevin.slidingtab.SlidingTabLayout-->
+<!--        android:id="@+id/sliding_tab"-->
+<!--        android:background="@color/tabbackground"-->
+<!--        app:stl_tabDividerColor="@color/white"-->
+<!--        app:stl_tabDividerWidth="@dimen/dp_1"-->
+<!--        app:stl_tabIndicatorColor="@color/white"-->
+<!--        app:stl_tabTextSize="@dimen/sp_15"-->
+<!--        app:stl_tabPaddingStart="@dimen/dp_5"-->
+<!--        app:stl_tabPaddingEnd="@dimen/dp_5"-->
+<!--        app:stl_tabSelectedTextColor="@color/white"-->
+<!--        app:stl_tabTextSelectedBold="true"-->
+<!--        app:stl_tabTextBold="false"-->
+<!--        app:stl_tabTextShowScaleAnim="true"-->
+<!--        app:stl_tabIndicatorCreep="true"-->
+<!--        app:stl_tabIndicatorHeight="@dimen/dp_1"-->
+<!--        app:stl_tabTextColor="@color/white"-->
+<!--        android:layout_width="match_parent"-->
+<!--        app:stl_tabMode="scrollable"-->
+<!--        android:layout_height="@dimen/dp_40">-->
+<!--    </com.kevin.slidingtab.SlidingTabLayout>-->
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.viewpager.widget.ViewPager>
+
+</LinearLayout>

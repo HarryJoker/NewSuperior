@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="gov.android.com.superior.home.unit.ProposalFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="建议提案" />
+
+    <gov.android.com.superior.view.NestListView
+        android:entries="@array/entrys"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </gov.android.com.superior.view.NestListView>
+
+</LinearLayout>

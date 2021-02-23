@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="10dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".home.unit.task.NewTraceActivity">
+
+    <TextView android:text="审核备注"
+        android:textColor="@color/gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_border"
+        android:padding="@dimen/dp_5"
+        android:maxLines="8"
+        android:lines="6"
+        android:gravity="left|top"
+        android:hint="请填写审核备注"
+        android:textSize="14sp" />
+
+    <TextView android:text="审核类型"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+
+    <RadioGroup android:id="@+id/rg_types"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton android:id="@+id/rb_nomal"
+            android:text="进度正常"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton android:id="@+id/rb_slow"
+            android:text="进度缓慢"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton android:id="@+id/rb_fast"
+            android:text="进度较快"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton android:id="@+id/rb_back"
+            android:text="退回完善"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton android:id="@+id/rb_press"
+            android:text="催报工作"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton android:id="@+id/rb_done"
+            android:text="任务完成"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/progress"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView android:text="审核进度"
+            android:textColor="@color/gray"
+            android:padding="@dimen/dp_5"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_progress"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_border"
+            android:padding="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:maxLines="1"
+            android:lines="1"
+            android:inputType="number"
+            android:gravity="left|center_vertical"
+            android:hint="请填写审核进度(只可填写1-100的数值)"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+
+    <TextView android:id="@+id/tv_create_click"
+        android:text="确认"
+        android:layout_marginTop="20dp"
+        android:textSize="18dp"
+        android:textColor="#ffffff"
+        android:padding="13dp"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:onClick="veriryTraceClick"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

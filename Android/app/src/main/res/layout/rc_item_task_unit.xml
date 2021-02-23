@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ck_check"
+    android:button="@null"
+    android:background="@drawable/selector_check_unit"
+    android:textColor="@color/selector_check_unit"
+    android:paddingBottom="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_10"
+    android:paddingLeft="@dimen/dp_5"
+    android:paddingRight="@dimen/dp_5"
+    android:text="哈哈哈哈或"
+    android:ellipsize="end"
+    android:maxLines="1"
+     android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+</CheckBox>

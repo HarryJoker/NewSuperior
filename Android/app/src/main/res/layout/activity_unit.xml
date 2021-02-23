@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    tools:context=".ui.userinfo.UnitActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+              android:orientation="vertical" >
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                app:riv_border_width="@dimen/dp_1"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="@dimen/dp_30"
+                app:riv_border_color="@color/lightgray"
+                android:src="@mipmap/ic_avatar" />
+
+            <TextView
+                android:id="@+id/tv_logo"
+                style="@style/labelStyle"
+                android:textSize="@dimen/sp_13"
+                android:onClick="chooseLogoClick"
+                android:textColor="@color/gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="点击选择LOGO" />
+
+            <TextView
+                android:id="@+id/tv_unit_name"
+                style="@style/labelStyle"
+                android:textSize="@dimen/sp_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="单位名称" />
+        </LinearLayout>
+
+        <LinearLayout android:orientation="vertical"
+            android:id="@+id/layout_unit"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/labelStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="部门职责：" />
+
+            <EditText
+                android:id="@+id/et_duty"
+                android:layout_width="match_parent"
+                android:minLines="6"
+                android:padding="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/shape_border"
+                android:maxLines="50"
+                android:textSize="@dimen/sp_14"
+                android:gravity="top|start"
+                android:hint="请填写部门职责描述"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/btn_authcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:onClick="updateUserClick"
+            android:text="确认" >
+        </TextView>
+    </LinearLayout>
+</ScrollView>

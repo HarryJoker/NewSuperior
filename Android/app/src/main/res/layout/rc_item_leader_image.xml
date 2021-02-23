@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+                    android:scaleType="centerCrop"
+
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/dp_86"
+            android:layout_height="@dimen/dp_86"
+            android:layout_margin="10dp"
+            app:riv_corner_radius="@dimen/dp_43"
+            app:riv_border_width="@dimen/dp_1"
+            app:riv_border_color="@color/lightgray"
+            android:src="@mipmap/ic_avatar" />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            style="@style/Base.Widget.AppCompat.CompoundButton.CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top" />
+    </FrameLayout>
+
+    <TextView android:id="@+id/tv_name"
+        android:layout_gravity="center_horizontal"
+        android:text="张县长"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

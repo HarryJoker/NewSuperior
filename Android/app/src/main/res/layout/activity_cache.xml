@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:clickable="true"
+    android:onClick="clearClick"
+    android:layout_margin="@dimen/dp_10"
+    android:background="@drawable/shape_layer_gray"
+    tools:context=".ui.unit.person.CacheActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="清空缓存"
+        android:padding="@dimen/dp_5"
+        android:gravity="center_vertical"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/sp_13" />
+
+    <TextView android:text=">"
+        android:textSize="@dimen/sp_18"
+        android:gravity="center"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"/>
+</LinearLayout>

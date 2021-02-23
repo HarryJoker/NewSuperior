@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/white">
+
+    <LinearLayout android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+                    android:scaleType="centerCrop"
+
+            android:id="@+id/lv_avatar"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:src="@mipmap/ic_avatar"
+            app:riv_border_color="@color/lightgray"
+            app:riv_border_width="@dimen/dp_1"
+            app:riv_corner_radius="@dimen/dp_30" />
+
+        <TextView  android:id="@+id/tv_name"
+            android:text=""
+            android:layout_marginTop="@dimen/dp_10"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/darkgray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+<!--        <TextView android:id="@+id/tv_phone"-->
+<!--            android:text="134****0367"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
+
+    </LinearLayout>
+
+    <gov.android.com.superior.view.GestureLockLayout
+        android:id="@+id/gesutrelocklayout"
+        android:background="#FFFFFF"
+        app:count="3"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="40dp"
+        app:tryTimes="3"
+        app:color_no_finger_inner_circle="#e4e1e1"
+        app:color_no_finger_outer_circle="#ffffff"
+        app:color_finger_on="#378FC9"
+        app:color_finger_up="#2084C6"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+    </gov.android.com.superior.view.GestureLockLayout>
+
+
+    <LinearLayout android:orientation="horizontal"
+        android:gravity="bottom|center"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:text="指纹登录"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:clickable="true"
+            android:onClick="fingerViewClick"
+            android:textColor="@color/darkgray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView android:text="|"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:layout_marginRight="10dp"
+            android:textSize="15dp"
+            android:visibility="gone"
+            android:textColor="@color/darkgray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView android:text="账号登录"
+            android:padding="5dp"
+            android:textSize="15dp"
+            android:clickable="true"
+            android:onClick="loginViewClick"
+            android:textColor="@color/darkgray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

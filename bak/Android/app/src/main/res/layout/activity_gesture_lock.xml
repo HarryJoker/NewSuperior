@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/white"
+    tools:context="gov.android.com.superior.login.GestureLockLoginActivity">
+
+    <LinearLayout android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <cn.carbs.android.avatarimageview.library.AvatarImageView
+            android:id="@+id/lv_avatar"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:src="@mipmap/icon_mayun"
+            app:aiv_BoarderColor="@color/lightgray"
+            app:aiv_BoarderWidth="@dimen/dp_1"
+            app:aiv_ShowBoarder="true" />
+
+        <TextView  android:id="@+id/tv_name"
+            android:text=""
+            android:layout_marginTop="@dimen/dp_10"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/darkgray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <gov.android.com.superior.view.GestureLockLayout
+        android:id="@+id/gesutrelocklayout"
+        android:background="#ffffff"
+        app:count="3"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="40dp"
+        app:tryTimes="3"
+        app:color_no_finger_inner_circle="#e4e1e1"
+        app:color_no_finger_outer_circle="#ffffff"
+        app:color_finger_on="#378FC9"
+        app:color_finger_up="#2084C6"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </gov.android.com.superior.view.GestureLockLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_user_navigation"
+    app:startDestination="@+id/navigation_supervise">
+
+    <fragment
+        android:id="@+id/navigation_supervise"
+        android:name="gov.android.com.superior.ui.masses.SuperviseFragment"
+        android:label="@string/title_supervise"
+        tools:layout="@layout/fragment_supervise" />
+
+    <fragment
+        android:id="@+id/navigation_score"
+        android:name="gov.android.com.superior.ui.masses.ScoreFragment"
+        android:label="@string/title_score"
+        tools:layout="@layout/fragment_score" />
+
+    <fragment
+        android:id="@+id/navigation_space"
+        android:name="gov.android.com.superior.ui.masses.SpaceFragment"
+        android:label="@string/title_space"
+        tools:layout="@layout/fragment_space" />
+
+    <fragment
+        android:id="@+id/navigation_live"
+        android:name="gov.android.com.superior.ui.masses.LiveFragment"
+        android:label="@string/title_live"
+        tools:layout="@layout/fragment_live" />
+</navigation>

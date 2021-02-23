@@ -1,0 +1,178 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="ChatTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorAccent</item>
+    </style>
+
+    <!-- Dialog样式-->
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:drawable/screen_background_dark_transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+
+    <style name="DatePickerSpinner">
+        <item name="android:textSize">@dimen/sp_21</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:colorControlNormal" tools:targetApi="lollipop">#ddd</item>
+    </style>
+
+    <!-- dialog样式 -->
+    <style name="mLoadDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+<!--    <style name="mypopwindow_anim_style">-->
+<!--        <item name="android:windowEnterAnimation">@anim/anim_pop_show</item>-->
+<!--        &lt;!&ndash; 指定显示的动画xml &ndash;&gt;-->
+<!--        <item name="android:windowExitAnimation">@anim/anim_pop_dis</item>-->
+<!--        &lt;!&ndash; 指定消失的动画xml &ndash;&gt;-->
+<!--    </style>-->
+
+<!--    <style name="pop_image">-->
+<!--        <item name="android:layout_width">wrap_content</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--    </style>-->
+
+<!--    <style name="pop_text">-->
+<!--        <item name="android:layout_width">match_parent</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--        <item name="android:textColor">@color/white</item>-->
+<!--        <item name="android:layout_gravity">center_vertical</item>-->
+<!--        <item name="android:textSize">@dimen/sp_17</item>-->
+<!--        <item name="android:gravity">center</item>-->
+<!--        <item name="android:layout_marginRight">18dp</item>-->
+<!--        <item name="android:layout_marginLeft">10dp</item>-->
+<!--    </style>-->
+
+<!--    <style name="wode_tixian">-->
+<!--        <item name="android:layout_weight">1</item>-->
+<!--        <item name="android:gravity">center</item>-->
+<!--        <item name="android:orientation">vertical</item>-->
+<!--        <item name="android:layout_width">match_parent</item>-->
+<!--        <item name="android:paddingTop">@dimen/dp_12</item>-->
+<!--        <item name="android:paddingBottom">@dimen/dp_13</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--    </style>-->
+
+
+<!--    <style name="wode_tixian_text">-->
+<!--        <item name="android:layout_width">wrap_content</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--        <item name="android:textColor">@color/color_55</item>-->
+<!--        <item name="android:textSize">@dimen/sp_14</item>-->
+<!--        <item name="android:layout_marginTop">@dimen/dp_10</item>-->
+<!--    </style>-->
+
+<!--    <style name="BottomDialog" parent="@style/Base.V7.Theme.AppCompat.Light.Dialog">-->
+<!--         <item name="android:windowNoTitle">true</item>-->
+<!--         <item name="android:windowBackground">@android:color/transparent</item>-->
+<!--    </style>-->
+
+<!--    <style name="BalanceBottomDialog_Animation" parent="Animation.AppCompat.Dialog">-->
+<!--        <item name="android:windowEnterAnimation">@anim/dialog_balance_in</item>-->
+<!--        <item name="android:windowExitAnimation">@anim/dialog_balance_out</item>-->
+<!--    </style>-->
+
+<!--    <style name="item_customeronline">-->
+<!--        <item name="android:background">@color/white</item>-->
+<!--        <item name="android:paddingTop">@dimen/dp_16</item>-->
+<!--        <item name="android:paddingBottom">@dimen/dp_17</item>-->
+<!--        <item name="android:textSize">@dimen/sp_17</item>-->
+<!--        <item name="android:textColor">@color/color_55</item>-->
+<!--        <item name="android:paddingLeft">@dimen/dp_14</item>-->
+<!--        <item name="android:layout_width">match_parent</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--        <item name="android:layout_marginBottom">@dimen/dp_0_5</item>-->
+<!--    </style>-->
+
+<!--    <style name="styleNoFrameDialog" parent="android:style/Theme.Dialog">-->
+<!--        <item name="android:windowBackground">@color/transparent</item>-->
+<!--        <item name="android:windowNoTitle">true</item>-->
+<!--        <item name="android:windowFrame">@null</item> &lt;!&ndash; 边框 &ndash;&gt;-->
+<!--    </style>-->
+
+<!--    <style name="styleNoFrameDialog_bottom" parent="styleNoFrameDialog">-->
+<!--        <item name="android:windowBackground">@color/transparent</item>-->
+<!--    </style>-->
+
+
+<!--    <style name="ll_addbankcard">-->
+<!--        <item name="android:gravity">center_vertical</item>-->
+<!--        <item name="android:background">@color/white</item>-->
+<!--        <item name="android:paddingLeft">@dimen/dp_15</item>-->
+<!--        <item name="android:paddingRight">@dimen/dp_15</item>-->
+<!--        <item name="android:layout_width">match_parent</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--    </style>-->
+
+<!--    <style name="tv_addbankcard">-->
+<!--        <item name="android:layout_marginRight">@dimen/dp_16</item>-->
+<!--        <item name="android:layout_marginTop">@dimen/dp_12</item>-->
+<!--        <item name="android:layout_marginBottom">@dimen/dp_12</item>-->
+<!--        <item name="android:layout_centerVertical">true</item>-->
+<!--        <item name="android:layout_width">wrap_content</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--        <item name="android:textSize">@dimen/sp_17</item>-->
+<!--        <item name="android:textColor">@color/color_33</item>-->
+<!--    </style>-->
+
+<!--    <style name="line_15_color_dd">-->
+<!--        <item name="android:layout_marginLeft">@dimen/dp_15</item>-->
+<!--        <item name="android:layout_marginRight">@dimen/dp_15</item>-->
+<!--        <item name="android:background">@color/color_graydd</item>-->
+<!--        <item name="android:layout_width">match_parent</item>-->
+<!--        <item name="android:layout_height">@dimen/dp_1</item>-->
+<!--    </style>-->
+
+<!--    <style name="et_addbankcard">-->
+<!--        <item name="android:singleLine">true</item>-->
+<!--        <item name="android:maxLines">1</item>-->
+<!--        <item name="android:layout_weight">2</item>-->
+<!--        <item name="android:gravity">right|center</item>-->
+<!--        <item name="android:background">@null</item>-->
+<!--        <item name="android:layout_width">wrap_content</item>-->
+<!--        <item name="android:layout_height">match_parent</item>-->
+<!--    </style>-->
+
+
+<!--    <style name="tv_redroom_details_left">-->
+<!--        <item name="android:paddingRight">@dimen/dp_10</item>-->
+<!--        <item name="android:paddingLeft">@dimen/dp_12</item>-->
+<!--        <item name="android:paddingBottom">@dimen/dp_16</item>-->
+<!--        <item name="android:paddingTop">@dimen/dp_16</item>-->
+<!--        <item name="android:layout_weight">1</item>-->
+<!--        <item name="android:textColor">@color/black_22</item>-->
+<!--        <item name="android:textSize">@dimen/dp_18</item>-->
+<!--        <item name="android:layout_width">wrap_content</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--    </style>-->
+
+
+<!--    <style name="tv_redroom_details_right">-->
+<!--        <item name="android:paddingRight">@dimen/dp_37</item>-->
+<!--        <item name="android:layout_alignParentRight">true</item>-->
+<!--        <item name="android:paddingBottom">@dimen/dp_16</item>-->
+<!--        <item name="android:paddingTop">@dimen/dp_16</item>-->
+<!--        <item name="android:textColor">@color/black_3a</item>-->
+<!--        <item name="android:textSize">@dimen/dp_18</item>-->
+<!--        <item name="android:layout_width">wrap_content</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--        <item name="android:maxLines">1</item>-->
+<!--        <item name="android:singleLine">true</item>-->
+<!--    </style>-->
+
+</resources>

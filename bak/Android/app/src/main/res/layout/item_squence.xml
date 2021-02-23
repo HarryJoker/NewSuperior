@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.carbs.android.avatarimageview.library.AvatarImageView
+        android:id="@+id/lv_sequence"
+        app:aiv_BoarderWidth="1dp"
+        app:aiv_BoarderColor="#e3e3e6"
+        app:aiv_TextColor="@color/colorPrimary"
+        app:aiv_ShowBoarder="true"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+    <TextView android:id="@+id/tv_sequence"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

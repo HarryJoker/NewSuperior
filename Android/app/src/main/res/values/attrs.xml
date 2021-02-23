@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--TabIndicator的参数设置-->
+    <declare-styleable name="TaskView">
+        <attr name="type" format="integer" />
+    </declare-styleable>
+
+
+    <!--TabIndicator的参数设置-->
+    <declare-styleable name="PagerSlidingTab">
+        <attr name="indicatorColor" format="color" />
+        <attr name="underlineColor" format="color" />
+        <attr name="dividerColor" format="color" />
+        <attr name="indicatorHeight" format="dimension" />
+        <attr name="underlineHeight" format="dimension" />
+        <attr name="pst_dividerPadding" format="dimension" />
+        <attr name="tabPaddingLeftRight" format="dimension" />
+        <attr name="scrollOffset" format="dimension" />
+        <attr name="tabBackgrounds" format="reference" />
+        <attr name="sameLine" format="boolean" />
+        <attr name="pst_textAllCaps" format="boolean" />
+    </declare-styleable>
+
+
+    <!--GestureLockLayout-->
+    <attr name="color_no_finger_inner_circle" format="color" />
+    <attr name="color_no_finger_outer_circle" format="color" />
+    <attr name="color_finger_on" format="color" />
+    <attr name="color_finger_up" format="color" />
+    <attr name="count" format="integer" />
+    <attr name="tryTimes" format="integer" />
+
+    <declare-styleable name="GestureLockLayout">
+        <attr name="color_no_finger_inner_circle" />
+        <attr name="color_no_finger_outer_circle" />
+        <attr name="color_finger_on" />
+        <attr name="color_finger_up" />
+        <attr name="count" />
+        <attr name="tryTimes" />
+    </declare-styleable>
+
+    <declare-styleable name="Search_View">
+        <attr name="textSizeSearch" format="dimension"  />
+        <attr name="textColorSearch" format="color" />
+        <attr name="textHintSearch" format="string" />
+        <attr name="searchBlockHeight" format="integer" />
+        <attr name="searchBlockColor" format="color" />
+    </declare-styleable>
+</resources>

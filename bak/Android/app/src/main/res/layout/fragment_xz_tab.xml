@@ -1,0 +1,308 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="gov.android.com.superior.home.official.TabFragment">
+
+
+    <com.harry.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="pullFromStart" >
+
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                app:title_background="#7777"
+                android:layout_width="match_parent"
+                android:layout_height="140dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:padding="5dp"
+                android:background="#f4f4f4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView android:text="|"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView android:text="数据报告"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout android:id="@+id/layout_gather"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView android:id="@+id/tv_name"
+                        android:layout_marginLeft="5dp"
+                        android:drawableLeft="@mipmap/icon_palace"
+                        android:textSize="15sp"
+                        android:drawablePadding="5dp"
+                        android:text="副县长（张三）"
+                        android:textColor="@color/dimgray2"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textSize="13sp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/darkgray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/layout_detail"
+                    android:orientation="horizontal"
+                    android:background="@mipmap/bg_shadow_black"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_gather"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <GridView android:id="@+id/gv_sequence"
+                            android:numColumns="7"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        </GridView>
+
+                        <LinearLayout android:id="@+id/layout_type"
+                            android:orientation="vertical"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView android:text="人大："
+                                    android:textSize="16sp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <TextView android:id="@+id/tv_rd_count"
+                                    android:text="0"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                            <LinearLayout android:orientation="horizontal"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView android:text="政协："
+                                    android:textSize="16sp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <TextView android:id="@+id/tv_zx_count"
+                                    android:text="0"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_green"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:drawableTop="@mipmap/state_finish"
+                                android:text="0"
+                                android:drawablePadding="3dp"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:id="@+id/tv_zi"
+                                android:gravity="center"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:drawableTop="@mipmap/icon_light_green"
+                                android:text="0"
+                                android:textSize="16sp"
+                                android:layout_marginLeft="5dp"
+                                android:drawablePadding="3dp"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:id="@+id/tv_yellow"
+                                android:gravity="center"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:drawableTop="@mipmap/icon_light_yellow"
+                                android:text="0"
+                                android:textSize="16sp"
+                                android:layout_marginLeft="5dp"
+                                android:drawablePadding="3dp"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:id="@+id/tv_red"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:drawableTop="@mipmap/icon_light_red"
+                                android:text="0"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:drawablePadding="3dp"
+                                android:textColor="@color/white" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView android:layout_weight="1"
+                        android:layout_width="0dip"
+                        android:background="@mipmap/bg_boxing"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <TextView android:background="@color/lightgray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+
+                <LinearLayout android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView android:id="@+id/tv_report"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="需审阅的任务"
+                        android:lineSpacingExtra="3dp"
+                        android:textColor="@color/dimgray"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="5dp"
+                        android:drawableLeft="@mipmap/menu_verify"
+                        android:drawableRight="@mipmap/arrow_carrot_right"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="1dp"
+                        android:background="@color/lightgray"
+                        android:layout_height="match_parent" />
+                    <TextView android:id="@+id/tv_all"
+                        android:drawableLeft="@mipmap/menu_all"
+                        android:layout_width="0dp"
+                        android:padding="15dp"
+                        android:textColor="@color/dimgray"
+                        android:text="分管的工作任务"
+                        android:lineSpacingExtra="3dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:drawableRight="@mipmap/arrow_carrot_right"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:background="#f4f4f4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView android:text="|"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView android:text="分管领导"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <gov.android.com.superior.view.NestGridView
+                android:id="@+id/gv_leaders"
+                android:numColumns="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </gov.android.com.superior.view.NestGridView>
+
+        </LinearLayout>
+    </com.harry.pulltorefresh.library.PullToRefreshScrollView>
+
+</FrameLayout>

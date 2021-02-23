@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/side_nav_bar2"
+    android:gravity="bottom"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+    <LinearLayout
+        android:layout_margin="@dimen/dp_10"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <cn.carbs.android.avatarimageview.library.AvatarImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:aiv_TextColor="@color/colorPrimary"
+            app:aiv_BoarderWidth="@dimen/dp_1"
+            app:aiv_ShowBoarder="true"
+            android:layout_alignParentLeft="true"
+            app:aiv_BoarderColor="@color/lightgray"
+            android:src="@mipmap/icon_mayun" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+            <TextView android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:textSize="@dimen/sp_13"
+                android:text="民政局"
+                android:layout_toRightOf="@id/iv_logo"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView android:id="@+id/tv_unit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_logo"
+                android:layout_below="@id/tv_name"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:textSize="@dimen/sp_11"
+                android:text="民政局"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:textSize="@dimen/sp_10"
+        android:ellipsize="end"
+        android:text="民政局局长，负责统筹大小一切事务。" />
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <group android:checkableBehavior="single">-->
+<!--        <item-->
+<!--            android:id="@+id/nav_all_task"-->
+<!--            android:icon="@mipmap/menu_all"-->
+<!--            android:title="所有的任务" />-->
+<!--        -->
+<!--        <item-->
+<!--            android:id="@+id/nav_virify_task"-->
+<!--            android:icon="@mipmap/menu_verify"-->
+<!--            android:checkable="true"-->
+<!--            android:checked="false"-->
+<!--            android:title="待审核任务" />-->
+
+<!--        <item-->
+<!--            android:id="@+id/nav_verify_trace"-->
+<!--            android:icon="@mipmap/menu_finish"-->
+<!--            android:title="已审核任务" />-->
+
+<!--    </group>-->
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_user"
+            android:icon="@mipmap/menu_verify"
+            android:checkable="true"
+            android:checked="false"
+            android:title="个人中心" />
+
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@mipmap/menu_verify"
+            android:checkable="true"
+            android:checked="false"
+            android:title="我的消息" />
+
+        <item
+            android:id="@+id/nav_unit"
+            android:icon="@mipmap/menu_verify"
+            android:checkable="true"
+            android:checked="false"
+            android:title="更换部门" />
+
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@mipmap/menu_verify"
+            android:checkable="true"
+            android:checked="false"
+            android:title="历史数据" />
+
+        <item
+            android:id="@+id/nav_cache"
+            android:icon="@mipmap/menu_my"
+            android:title="缓存设置" />
+    </group>
+
+    <group android:id="@+id/nav_more">
+            <item
+                android:id="@+id/nav_advice"
+                android:icon="@mipmap/menu_advice"
+                android:title="意见反馈" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@mipmap/menu_about"
+                android:title="关于我们" />
+
+<!--            <item-->
+<!--                android:id="@+id/nav_login"-->
+<!--                android:icon="@mipmap/menu_logout"-->
+<!--                android:title="退出" />-->
+    </group>
+
+</menu>

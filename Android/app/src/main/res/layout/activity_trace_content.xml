@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10">
+
+        <LinearLayout
+            android:id="@+id/layout_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="修改意见"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/tv_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@color/avatar_default_border"
+                android:gravity="left|top"
+                android:padding="@dimen/dp_5"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="进展情况"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:text="*"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@drawable/shape_border"
+            android:gravity="left|top"
+            android:hint="请填写工作进展情况"
+            android:lines="6"
+            android:maxLines="8"
+            android:padding="@dimen/dp_5"
+            android:textSize="@dimen/sp_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_5"
+                android:text="自评进度"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:text="*"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@drawable/shape_border"
+            android:gravity="left|center_vertical"
+            android:hint="请填写工作完成进度(只可填写1-100的数值)"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLines="1"
+            android:padding="@dimen/dp_5"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="存在问题"
+            android:textColor="@color/gray" />
+
+        <EditText
+            android:id="@+id/et_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@drawable/shape_border"
+            android:gravity="left|top"
+            android:hint="如工作进展中没有问题（可不填写）"
+            android:lines="4"
+            android:maxLines="8"
+            android:padding="@dimen/dp_5"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="推进措施"
+            android:textColor="@color/gray" />
+
+        <EditText
+            android:id="@+id/et_step"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@drawable/shape_border"
+            android:gravity="left|top"
+            android:hint="工作进展未遇问题（可不填写）"
+            android:lines="4"
+            android:maxLines="8"
+            android:padding="@dimen/dp_5"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:text="工作附件"
+            android:textColor="@color/gray" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_attachment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:text="报送月份："
+                android:textColor="@color/gray" />
+
+            <Spinner
+                android:id="@+id/sp_task_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_create_click"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@color/colorPrimary"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="newTraceClick"
+            android:padding="@dimen/dp_13"
+            android:text="提交领导签字"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/sp_18" />
+
+    </LinearLayout>
+</ScrollView>
+

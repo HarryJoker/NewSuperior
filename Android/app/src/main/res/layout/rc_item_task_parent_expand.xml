@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/dp_1"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/dp_10"
+    android:paddingEnd="@dimen/dp_10"
+    android:paddingBottom="@dimen/dp_10">
+
+    <ImageView
+        android:id="@+id/iv_indicator"
+        android:layout_width="@dimen/dp_25"
+        android:layout_height="@dimen/dp_25"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:src="@drawable/drawable_expand_indicator" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_title_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="重点工作："
+                android:textColor="@color/crimson"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="经济开发区投资，完善设施拼图，积累经验提高战斗力"
+                android:textColor="@color/crimson"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_content_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="推进计划："
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="全县有到位资金的招商引资项目14个，认定到位资金8.77亿元。其中，新建项目2个，续建项目12个。今年新批2家外资企业：滨州尤科生物科技有限公司和山东美可达电子影像有限公司。"
+                android:textColor="@color/dimgrey"
+                android:textSize="@dimen/sp_13" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

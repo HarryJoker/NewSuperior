@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/color_1agray"
+    tools:context=".TestActivity">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="@dimen/dp_15"
+        android:src="@mipmap/ic_avatar"
+        app:riv_border_color="@color/avatar_default_border"
+        app:riv_border_width="@dimen/dp_1"
+        app:riv_corner_radius="@dimen/dp_30" />
+
+    <TextView
+        android:id="@+id/tv_unit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:text="社保局"
+        android:textSize="@dimen/sp_15"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
+                android:src="@mipmap/ic_score_level" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="部门绩效考评等级"
+                android:textColor="@color/black_3a"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_score_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="优秀"
+                android:textColor="@color/category1"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
+                android:src="@mipmap/ic_score_rank" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="部门绩效考评排名"
+                android:textColor="@color/black_3a"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_score_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="1"
+                android:textColor="@color/black_22"
+                android:textSize="@dimen/sp_22"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.RadarChart
+        android:id="@+id/chart1"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="@dimen/dp_375"
+        android:layout_height="0dp"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:background="@color/color_1agray"
+        android:layout_weight="1" />
+
+</LinearLayout>

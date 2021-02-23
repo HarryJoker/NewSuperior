@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="gov.android.com.superior.gather.GatherDetailActivity">
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<LinearLayout android:orientation="vertical"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+            <!---->
+        <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+    <gov.android.com.superior.view.NestExpandableListView
+        android:id="@+id/elv_grade"
+        android:layout_margin="10dp"
+        android:groupIndicator="@drawable/expand_list_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </gov.android.com.superior.view.NestExpandableListView>
+</FrameLayout>

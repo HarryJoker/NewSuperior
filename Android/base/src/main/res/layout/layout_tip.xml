@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flyco.roundview.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:textColor="#ffffff"
+    android:padding="@dimen/dp_10"
+    app:rv_backgroundColor="#DDFF0062"
+    app:rv_cornerRadius="@dimen/dp_8">
+
+    <ImageView android:id="@+id/iv_tip"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text=""
+        android:textColor="#ffffff"
+        android:textSize="@dimen/sp_14" />
+</com.flyco.roundview.RoundLinearLayout>

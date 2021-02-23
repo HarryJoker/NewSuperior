@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_11"
+        android:background="@drawable/shape_layer_gray"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择月报月份："
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_13" />
+
+        <Spinner
+            android:id="@+id/sp_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/shape_layer_gray"
+        android:elevation="@dimen/dp_2">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+                    android:scaleType="centerCrop"
+
+            android:id="@+id/lv_logo"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dp_10"
+            android:src="@mipmap/ic_avatar"
+            app:riv_border_color="@color/avatar_default_border"
+            app:riv_border_width="@dimen/dp_1"
+            app:riv_corner_radius="@dimen/dp_30" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lv_logo"
+            android:layout_centerHorizontal="true"
+            android:text="郝波"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/tv_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="您的9月份月报"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/tv_taskCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_month"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="您分管的部门共承担15项"
+            android:textColor="@color/disgray"
+            android:textSize="@dimen/sp_13" />
+
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_taskCount"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_doneCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_month"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="按时达标完成15项"
+                android:textColor="@color/disgray"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_overdueCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_month"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="进展缓慢工作15项"
+                android:textColor="@color/disgray"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_slowCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_month"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="进展较快任务15项"
+                android:textColor="@color/disgray"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_backCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_month"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="已完成工作15项"
+                android:textColor="@color/disgray"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/shape_layer_gray"
+        android:orientation="vertical">
+
+<!--        <com.kevin.slidingtab.SlidingTabLayout-->
+<!--            android:id="@+id/sliding_tab"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/dp_30"-->
+<!--            app:stl_tabDividerColor="@color/white"-->
+<!--            app:stl_tabDividerWidth="@dimen/dp_2"-->
+<!--            app:stl_tabIndicatorColor="@color/lightgray"-->
+<!--            app:stl_tabIndicatorCreep="true"-->
+<!--            app:stl_tabIndicatorHeight="@dimen/dp_1_5"-->
+<!--            app:stl_tabMode="scrollable"-->
+<!--            app:stl_tabPaddingEnd="@dimen/dp_5"-->
+<!--            app:stl_tabPaddingStart="@dimen/dp_5"-->
+<!--            app:stl_tabSelectedTextColor="@color/white"-->
+<!--            app:stl_tabTextBold="false"-->
+<!--            app:stl_tabTextColor="@color/white"-->
+<!--            app:stl_tabTextSelectedBold="true"-->
+<!--            app:stl_tabTextShowScaleAnim="true"-->
+<!--            app:stl_tabTextSize="@dimen/sp_13" />-->
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/sliding_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/tabbackground"
+            app:tl_textAllCaps="true"
+            app:tl_textBold="BOTH"
+            app:tl_textsize="14sp" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white" />
+    </LinearLayout>
+
+</LinearLayout>

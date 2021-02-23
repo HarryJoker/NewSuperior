@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        Signing {
+            storeFile file('D:\\WorkSpace\\Superior\\NewAndroid\\com.superior.android.dev.jks')
+            storePassword 'wanghua828123'
+            keyAlias = 'com.superior.android.dev'
+            keyPassword 'wanghua828123'
+        }
+    }
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "gov.android.com.superior.dev"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        ndk {
+            // Bugly 设置支持的SO库架构
+            abiFilters 'armeabi' //, 'x86_64' , 'x86', 'armeabi-v7a', 'arm64-v8a'
+        }
+
+//        buildConfigField("String", "sdkPackage", "\"${DPSDK_SdkPackage}\"")
+        buildConfigField("String", "sdkPackage", "\"com.android.business.adapter.DataAdapteeImpl\"")
+        buildConfigField("boolean", "isVCloud", "false")
+        buildConfigField("boolean", "isExpress", "false")
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    //三方库：sms和监控
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    implementation project(path: ':base')
+//    implementation 'androidx.appcompat:appcompat:1.2.0'
+//    implementation 'com.google.android.material:material:1.2.0'
+//    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+//    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+//    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+//    implementation 'androidx.navigation:navigation-ui:2.3.0'
+//    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+//    implementation files('libs\\jsms_android-1.2.2.jar')
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+//    implementation files('libs\\DataAdapterModule-release.aar')
+//    implementation 'com.tencent.bugly:crashreport:3.2.33'
+//    implementation 'com.tencent.bugly:nativecrashreport:3.7.471'
+    /*******************监控Video*****************/
+//    compile(name: 'BaseLib-release', ext: 'aar')
+//    compile(name: 'DataAdapterModule-release', ext: 'aar')
+//    compile(name: 'DHCommon2.0-release', ext: 'aar')
+//    compile(name: 'EntityDefine-release', ext: 'aar')
+//    compile(name: 'DHPlayerComponent-release', ext: 'aar')
+//    compile(name: 'DHPlaySDKModule-release', ext: 'aar')
+//    compile(name: 'LogModule-release', ext: 'aar')
+//    compile(name: 'PullToRefresh_library-release', ext: 'aar')
+//    compile(name: 'OrmliteSqlcipherModlule-release', ext: 'aar')
+//    compile(name: 'PermissionChecker-release', ext: 'aar')
+//    compile(name: 'DataAdapteeModule-release', ext: 'aar')
+    rootProject.allModuleDependencies(dependencies)
+}

@@ -1,0 +1,8 @@
+【keystore】
+Password：bxzwdc12345678
+
+key Alias : BxzwdcApp
+password：bxzwdc12345678
+【root】
+password：bxzW828123
+

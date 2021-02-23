@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="gov.android.com.superior.home.supervise.VerifyActivity">
+
+    <ScrollView android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView android:text="重点工作："
+                    android:textSize="15sp"
+                    android:textColor="#bbbbbb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView android:id="@+id/tv_title"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView android:background="@color/lightgray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <LinearLayout android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView android:text="目标任务："
+                    android:textSize="15sp"
+                    android:textColor="#bbbbbb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView android:id="@+id/tv_content"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:background="@color/darkgray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+
+            <TextView android:id="@+id/tv_tip"
+                android:text="任务进展："
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textSize="16sp"
+                android:textColor="#bbbbbb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView android:id="@+id/tv_trace"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/dimgrey"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout android:id="@+id/layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <GridView android:id="@+id/gv_attachment"
+                android:numColumns="5"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </GridView>
+
+                <TextView
+                    android:background="@color/darkgray"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+            <TextView android:text="任务进度："
+                android:textSize="16sp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textColor="#bbbbbb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView android:id="@+id/tv_prgress"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/dimgrey"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:background="@color/darkgray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <TextView android:text="审核备注："
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textSize="16sp"
+                android:textColor="#bbbbbb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView android:id="@+id/tv_verifyContent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/dimgrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:background="@color/darkgray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+
+            <TextView android:id="@+id/tv_tip_score"
+                android:text="审核扣分："
+                android:textSize="16sp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textColor="#bbbbbb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <gov.android.com.superior.view.NestListView
+                android:id="@+id/lv_grade"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </gov.android.com.superior.view.NestListView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".TestActivity">
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/common_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="#ffffff"
+        app:tl_iconHeight="@dimen/dp_23"
+        app:tl_iconWidth="@dimen/dp_23"
+        app:tl_indicator_color="@color/colorPrimary"
+        app:tl_indicator_height="0dp"
+        app:tl_textSelectColor="@color/colorPrimary"
+        app:tl_textUnselectColor="#66000000"
+        app:tl_textsize="@dimen/sp_14"
+        app:tl_underline_color="#DDDDDD"
+        app:tl_underline_height="@dimen/dp_1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1"/>
+
+    <com.github.mikephil.charting.charts.RadarChart
+        android:id="@+id/chart1"
+        android:layout_width="@dimen/dp_375"
+        android:layout_weight="2"
+        android:layout_height="0dp" />
+
+</LinearLayout>

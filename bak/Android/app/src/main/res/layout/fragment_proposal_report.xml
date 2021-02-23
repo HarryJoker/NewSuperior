@@ -1,0 +1,213 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="gov.android.com.superior.home.subofficial.TabWorkReportFragment">
+
+
+    <com.harry.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="pullFromStart"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+
+        <LinearLayout android:orientation="vertical"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout android:orientation="vertical"
+                android:background="@mipmap/bg_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView android:src="@mipmap/bg_report"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="100dp"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+
+                <LinearLayout android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp" />
+
+                    <TextView android:text="我的"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="32sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView android:text="工作"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:textColor="@color/white"
+                        android:textSize="32sp"
+                        android:padding="2dp"
+                        android:background="@color/darkred"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView android:text="月报"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="32sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView android:id="@+id/tv_date"
+                        android:text="2017年8月"
+                        android:paddingRight="8dp"
+                        android:clickable="true"
+                        android:drawableLeft="@mipmap/arrow_carrot_down"
+                        android:background="@color/white"
+                        android:textColor="@color/darkred"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView android:text="县政府督查室"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView android:background="@color/lightgray"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <LinearLayout android:orientation="horizontal"
+                android:padding="10dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <cn.carbs.android.avatarimageview.library.AvatarImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/lv_logo"
+                        android:src="@mipmap/icon_mayun"
+                        app:aiv_ShowBoarder="true"
+                        app:aiv_BoarderColor="@color/lightgray"
+                        app:aiv_BoarderWidth="2dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" />
+                    <TextView android:id="@+id/tv_name"
+                        android:text="张三"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <TextView android:id="@+id/tv_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
+                    android:text="尊敬的张副县长，8月份您分管的部门共承担15项政府工作报告。"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView android:background="@color/lightgray"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView android:text="|"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView android:text="人大"
+                    android:textSize="16sp"
+                    android:textColor="@color/green"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <gov.android.com.superior.view.NestListView
+                android:id="@+id/lv_rd"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </gov.android.com.superior.view.NestListView>
+
+            <TextView android:background="@color/lightgray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView android:text="|"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/darkorchid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView android:text="政协"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/darkorchid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <gov.android.com.superior.view.NestListView
+                android:id="@+id/lv_zx"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </gov.android.com.superior.view.NestListView>
+
+        </LinearLayout>
+    </com.harry.pulltorefresh.library.PullToRefreshScrollView>
+
+</FrameLayout>

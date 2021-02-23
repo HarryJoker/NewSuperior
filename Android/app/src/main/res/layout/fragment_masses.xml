@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/common_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_gravity="center_vertical"
+        android:background="@color/tabbackground"
+        app:tl_divider_color="@color/white"
+        app:tl_divider_padding="@dimen/dp_10"
+        app:tl_divider_width="@dimen/dp_1"
+        app:tl_indicator_color="@color/white"
+        app:tl_tab_space_equal="true"
+        app:tl_textSelectColor="@color/white"
+        app:tl_textUnselectColor="@color/color_graydd"
+        app:tl_textsize="@dimen/sp_15"
+        app:tl_underline_color="#DDDDDD"
+        app:tl_underline_height="@dimen/dp_0_5" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5" />
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/sliding_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_38"
+        android:background="@color/tabbackground"
+        app:tl_divider_color="@color/white"
+        app:tl_divider_padding="@dimen/dp_10"
+        app:tl_divider_width="@dimen/dp_1"
+        app:tl_indicator_color="@color/white"
+        app:tl_tab_space_equal="true"
+        app:tl_textSelectColor="@color/white"
+        app:tl_textUnselectColor="@color/color_graydd"
+        app:tl_textsize="@dimen/sp_14" />
+    <!--    <com.kevin.slidingtab.SlidingTabLayout-->
+    <!--        android:id="@+id/sliding_tablayout"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="@dimen/dp_40"-->
+    <!--        android:background="@color/tabbackground"-->
+    <!--        app:stl_tabDividerColor="@color/white"-->
+    <!--        app:stl_tabDividerWidth="@dimen/dp_1"-->
+    <!--        app:stl_tabIndicatorColor="@color/white"-->
+    <!--        app:stl_tabIndicatorCreep="true"-->
+    <!--        app:stl_tabIndicatorHeight="@dimen/dp_1"-->
+    <!--        app:stl_tabMode="scrollable"-->
+    <!--        app:stl_tabPaddingEnd="@dimen/dp_5"-->
+    <!--        app:stl_tabPaddingStart="@dimen/dp_5"-->
+    <!--        app:stl_tabSelectedTextColor="@color/white"-->
+    <!--        app:stl_tabTextBold="false"-->
+    <!--        app:stl_tabTextColor="@color/white"-->
+    <!--        app:stl_tabTextSelectedBold="true"-->
+    <!--        app:stl_tabTextShowScaleAnim="true"-->
+    <!--        app:stl_tabTextSize="@dimen/sp_15" />-->
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

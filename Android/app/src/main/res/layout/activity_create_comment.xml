@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_15"
+    tools:context=".ui.unit.masses.livelihood.comment.CreateCommentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评价打分："
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sp_13" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/rb_score"
+            style="@style/Widget.MaterialRatingBar.RatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_25" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dp_10"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评价打分："
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sp_13" />
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@drawable/shape_border"
+            android:gravity="top"
+            android:hint="请填写您的评价"
+            android:lines="7"
+            android:maxLines="10"
+            android:padding="@dimen/dp_5"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+    <com.flyco.roundview.RoundTextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_margin="@dimen/dp_30"
+        android:gravity="center"
+        android:onClick="newCommentClick"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:rv_backgroundColor="@color/colorPrimary"
+        app:rv_backgroundPressColor="@color/colorPrimaryDark"
+        app:rv_cornerRadius="@dimen/dp_5" />
+</LinearLayout>

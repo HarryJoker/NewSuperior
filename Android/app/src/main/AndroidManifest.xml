@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gov.android.com.superior">
+
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.TYPE_SYSTEM_ALERT" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".SuperiorApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.unit.person.EditPasswordActivity"></activity>
+        <activity android:name=".ui.unit.person.CacheActivity" />
+        <activity android:name=".ui.masses.MassesPersonActivity" />
+        <activity android:name=".MainUserActivity" />
+        <activity android:name=".ui.login.PatterLockLoginActivity" />
+        <activity android:name=".ui.login.PatterLockSettingActivity" />
+        <activity android:name=".ui.login.AcountLoginActivity" />
+        <activity android:name=".ui.unit.masses.livelihood.TaskVoteActivity" />
+        <activity android:name=".ui.unit.masses.score.radar.UnitRadarActivity" />
+        <activity android:name=".ui.unit.dashboard.TaskIntroActivity" />
+        <activity android:name=".ui.unit.dashboard.tasks.UnAcceptTasksActivity" />
+        <activity android:name=".ui.unit.dashboard.tasks.UnitTaskListActivity" />
+        <activity android:name=".ui.unit.masses.livelihood.CreateOpinionActivity" />
+        <activity android:name=".ui.LinkWebActivity" />
+        <activity android:name=".ui.unit.masses.supervise.CreateClueActivity" />
+        <activity android:name=".ui.unit.masses.livelihood.comment.CreateCommentActivity" />
+        <activity android:name=".ui.unit.masses.livelihood.comment.TaskCommentActivity" />
+        <activity android:name=".ui.unit.masses.TaskInformActivity" />
+        <activity android:name=".ui.unit.person.MyClueActivity" />
+        <activity android:name=".ui.unit.person.MyNotationActivity" />
+        <activity android:name=".ui.unit.person.MyCommentActivity" />
+        <activity android:name=".ui.unit.person.MyVoteActivity" />
+        <activity android:name=".ui.unit.person.MyOpinionActivity" />
+        <activity android:name=".ui.unit.person.MyFavoriteActivity" />
+        <activity android:name=".TestActivity" />
+        <activity android:name=".ui.unit.dashboard.TaskDetailActivity" />
+        <activity android:name=".ui.unit.dashboard.tasks.UnitStayTasksActivity" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+        <activity android:name=".ui.login.SmsLoginActivity" />
+        <activity android:name=".ui.login.RegisterActivity" />
+        <activity android:name=".ui.PlayOnlineActivity" />
+        <activity android:name=".ui.userinfo.CreateUserActivity" />
+        <activity android:name=".ui.userinfo.UnitActivity" />
+        <activity android:name=".permission.core.PermissionActivity" />
+        <activity android:name=".ui.ImageActivity" />
+        <activity android:name=".ui.PaintActivity" />
+        <activity android:name=".ui.unit.dashboard.trace.TraceAcceptActivity" />
+        <activity android:name=".ui.unit.dashboard.trace.TraceAdminActivity" />
+        <activity android:name=".ui.unit.dashboard.trace.TraceBackActivity" />
+        <activity
+            android:name=".ui.unit.dashboard.trace.TraceContentActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.unit.dashboard.trace.TraceLeaderActivity" />
+        <activity android:name=".ui.unit.dashboard.trace.TraceReportActivity" />
+        <activity android:name=".ui.unit.dashboard.trace.TraceRushActivity" />
+        <activity
+            android:name=".ui.unit.dashboard.trace.TraceUnitStayActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.unit.person.message.MessageActivity" />
+        <activity android:name=".ui.unit.person.message.MessageListActivity" />
+        <activity android:name=".ui.unit.person.AboutActivity" />
+        <activity android:name=".ui.unit.person.AdviceActivity" />
+        <activity android:name=".ui.unit.dashboard.tasks.TaskMonthActivity" />
+
+        <meta-data
+            android:name="UPDATE_APP_KEY"
+            android:value="ab55ce55Ac4bcP408cPb8c1Aaeac179c5f6f" />
+    </application>
+
+</manifest>

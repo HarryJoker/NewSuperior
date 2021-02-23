@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="10dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <TextView android:text="完成审核"
+        android:textColor="@color/gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_border"
+        android:padding="@dimen/dp_5"
+        android:maxLines="8"
+        android:lines="6"
+        android:gravity="left|top"
+        android:hint="请填写任务调度完成描述"
+        android:textSize="14sp" />
+
+
+    <TextView android:id="@+id/tv_create_click"
+        android:text="确认调度完成"
+        android:layout_marginTop="20dp"
+        android:textSize="18dp"
+        android:textColor="#ffffff"
+        android:padding="13dp"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:onClick="veriryTraceClick"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

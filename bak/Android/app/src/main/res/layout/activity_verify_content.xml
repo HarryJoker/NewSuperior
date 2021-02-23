@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="10dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".home.unit.task.NewTraceActivity">
+
+    <TextView android:text="报送内容"
+        android:textColor="@color/gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_border"
+        android:padding="@dimen/dp_5"
+        android:maxLines="8"
+        android:lines="6"
+        android:gravity="left|top"
+        android:hint="请填写工作内容"
+        android:textSize="14sp" />
+
+    <TextView android:text="报送进度"
+        android:textColor="@color/gray"
+        android:padding="@dimen/dp_5"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_border"
+        android:padding="@dimen/dp_5"
+        android:maxLines="1"
+        android:lines="1"
+        android:inputType="number"
+        android:gravity="left|center_vertical"
+        android:hint="请填写工作进度(只可填写1-100的数值)"
+        android:textSize="14sp" />
+
+    <TextView android:text="工作附件"
+        android:textColor="@color/gray"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc_attachment"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+
+
+    <TextView android:text="手签批阅"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+
+    <ImageView android:id="@+id/tv_sign"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:scaleType="centerCrop"
+        android:background="@color/lightgray"
+        android:clickable="true"
+        android:gravity="center"
+        android:src="@mipmap/icon_add"
+        android:onClick="signClick"
+        android:layout_marginTop="10dp"
+         android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80" />
+
+<!--    <LinearLayout-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <TextView android:text="主要负责人："-->
+<!--            android:textColor="@color/gray"-->
+<!--            android:padding="@dimen/dp_5"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
+
+<!--        <Spinner android:id="@+id/sp_users"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+<!--    </LinearLayout>-->
+
+
+    <TextView android:text="选择操作"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+
+    <RadioGroup android:id="@+id/rg_types"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton android:id="@+id/rb_back"
+            android:text="退回修改完成"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton android:id="@+id/rb_confirm"
+            android:text="报送工作内容"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RadioGroup>
+
+
+    <TextView android:id="@+id/tv_create_click"
+        android:text="确认"
+        android:layout_marginTop="20dp"
+        android:textSize="18dp"
+        android:textColor="#ffffff"
+        android:padding="13dp"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:onClick="veriryClick"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    apply from: 'dependencies.gradle'
+
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.4'
+        
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// 扩展变量，用于统一管理每个 Module 的有关配置
+ext {
+    //统一控制各个 Module 使用的 SDK 版本
+    compileSdkVersion = 28
+    buildToolsVersion = "30.0.2"
+    minSdkVersion = 22
+    targetSdkVersion = 28
+    versionCode = 1
+    versionName = '2.0.2'
+}

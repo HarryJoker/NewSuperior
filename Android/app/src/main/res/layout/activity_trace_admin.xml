@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10">
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="审核备注"-->
+<!--        android:textColor="@color/gray" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/et_content"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/dp_5"-->
+<!--        android:background="@drawable/shape_border"-->
+<!--        android:gravity="left|top"-->
+<!--        android:hint="请填写审核备注"-->
+<!--        android:lines="6"-->
+<!--        android:maxLines="8"-->
+<!--        android:padding="@dimen/dp_5"-->
+<!--        android:textSize="@dimen/sp_14" />-->
+
+
+    <LinearLayout
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="审核进展"
+            android:textColor="@color/gray" />
+
+        <EditText
+            android:id="@+id/et_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@drawable/shape_border"
+            android:gravity="left|center_vertical"
+            android:hint="请填写审核进度(只可填写1-100的数值)"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="@dimen/dp_5"
+            android:textSize="@dimen/sp_14" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="审核类型" />
+
+    <RadioGroup
+        android:id="@+id/rg_types"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_fast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进度较快" />
+
+        <RadioButton
+            android:id="@+id/rb_nomal"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="序时推进" />
+
+        <RadioButton
+            android:id="@+id/rb_slow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_5"
+            android:text="进度缓慢" />
+
+        <RadioButton
+            android:id="@+id/rb_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_5"
+            android:text="调度完成" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/tv_create_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/colorPrimary"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="veriryTraceClick"
+        android:padding="13dp"
+        android:text="确认审核"
+        android:textColor="#ffffff"
+        android:textSize="18dp" />
+
+</LinearLayout>

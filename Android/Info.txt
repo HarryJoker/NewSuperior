@@ -1,0 +1,33 @@
+Key store Password: wanghua828123
+Key Password: wanghua828123
+Alis: com.superior.android.dev
+
+县长：13436730361
+副县长：13436730362
+具体责任人：13436730363
+主要责任人：13436730365
+督查：13436730364
+
+
+移动端：https://run.mockplus.cn/NXYVIbFv5fVuKDDP/index.html
+	1，群众端：https://lanhuapp.com/url/0Pv49
+	2，部门端：https://lanhuapp.com/url/RUsGC
+	3，县长端：https://lanhuapp.com/url/3VUo0
+	4，副县长端：https://lanhuapp.com/url/0Ibnz
+	5，督查端：https://lanhuapp.com/url/Z4DkO
+小程序：https://run.mockplus.cn/54OJjePq8eVqlTUl/index.html
+PC端：https://run.mockplus.cn/ofSRsXc70qOnwBhE/index.html
+后台管理：https://run.mockplus.cn/KtmI3PPz6nnPoI0q/index.html
+指挥中心：https://run.mockplus.cn/7CtsoNd0c2IZODJ1/index.html
+
+
+【待完善事项】
+1，政府工作报告（亮灯）展示
+2，报送内容（除政府工作报告，增加2项）
+3，部门自动生成账号（登录进行绑定手机号，个人中心设置换手机号绑定
+4，经办人和主要负责人功能区分
+    经办人：待领取事项，待完善报送事项
+    主要负责人：待手签报送事项
+5，页面布局：右上角弹框选择任务类型
+6，每月自动生成月报提醒
+7，审核功能可选择发送短信

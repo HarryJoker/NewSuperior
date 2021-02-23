@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dp_35">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/dp_1"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5">
+
+        <ImageView
+            android:id="@+id/iv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:src="@mipmap/icon_light_green"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="责任单位："
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:id="@+id/tv_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="文化局"
+                    android:textColor="@color/dimgrey"
+                    android:textSize="@dimen/sp_13" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前进度："
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:id="@+id/tv_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="0%"
+                    android:textColor="@color/dimgrey"
+                    android:textSize="@dimen/sp_13" />
+
+                <ProgressBar
+                    android:id="@+id/pb_progress"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_10"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:progress="10" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.lid.lib.LabelTextView
+        android:id="@+id/tv_label"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="match_parent"
+        android:layout_gravity="top|right"
+        android:gravity="center"
+        app:label_backgroundColor="#CAF14949"
+        app:label_distance="@dimen/dp_30"
+        app:label_height="@dimen/dp_20"
+        app:label_orientation="RIGHT_TOP"
+        app:label_strokeColor="@color/orangered"
+        app:label_strokeWidth="@dimen/dp_1"
+        app:label_text="哈哈哈"
+        app:label_textColor="#AB0A0A"
+        app:label_textSize="@dimen/sp_10" />
+
+</FrameLayout>

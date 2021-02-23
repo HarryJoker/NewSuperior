@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.first.orient.base">
+
+    <application>
+        <activity android:name=".activity.BaseRecylceActivity"></activity>
+        <activity android:name=".picker.PickSelectorActivity" android:theme="@style/DialogTheme"/>
+    </application>
+
+</manifest>

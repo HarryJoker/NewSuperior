@@ -1,0 +1,59 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="gov.android.com.superior.gather.GatherFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView android:text="J1：政府工作报告"
+            android:textColor="@color/dimgray"
+            android:textSize="11sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView android:text="J2：市委市政府重大决策部署"
+            android:textColor="@color/dimgray"
+            android:textSize="11sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView android:text="J3：建议提案"
+            android:textColor="@color/dimgray"
+            android:textSize="11sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView android:text="J4：会议议定事项"
+            android:textColor="@color/dimgray"
+            android:textSize="11sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView android:text="J5：领导批示"
+            android:textColor="@color/dimgray"
+            android:textSize="11sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView android:text="J6：专项督查"
+            android:textColor="@color/dimgray"
+            android:textSize="11sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView android:text="J7：重点项目"
+            android:textColor="@color/dimgray"
+            android:textSize="11sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barchart"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.github.mikephil.charting.charts.BarChart>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray">
+
+    <com.lht.paintview.PaintView
+        android:id="@+id/view_paint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_gravity="bottom|right"
+        android:layout_width="@dimen/dp_230"
+        android:layout_height="@dimen/dp_40"
+        android:layout_margin="@dimen/dp_5"
+        android:orientation="horizontal">
+<!--        <ImageButton-->
+<!--            android:id="@+id/btn_color"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/selector_btn_bg"-->
+<!--            android:src="@drawable/ic_red"/>-->
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/btn_stroke"
+            android:layout_width="wrap_content"
+            android:text="撤销"
+            android:clickable="true"
+            android:onClick="undoClick"
+            android:gravity="center"
+            ptr:rv_backgroundColor="@color/tabbackground"
+            ptr:rv_textPressColor="#137af0"
+            ptr:rv_cornerRadius="@dimen/dp_5"
+            android:padding="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/btn_clear"
+            android:text="清除"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:gravity="center"
+            ptr:rv_backgroundColor="@color/tabbackground"
+            ptr:rv_textPressColor="#137af0"
+            ptr:rv_cornerRadius="@dimen/dp_5"
+            android:padding="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:clickable="true"
+            android:onClick="clearClick"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/btn_undo"
+            android:text="确定"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:gravity="center"
+            ptr:rv_backgroundColor="@color/tabbackground"
+            ptr:rv_textPressColor="#137af0"
+            ptr:rv_cornerRadius="@dimen/dp_5"
+            android:padding="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:clickable="true"
+            android:onClick="saveClick"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView android:id="@+id/iv_state"
+        android:background="@mipmap/mail_unread"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="经济开发区投资，完善设施拼图，积累经验提高战斗力"
+            android:textColor="@color/darkText"
+            android:textSize="15sp" />
+
+        <TextView android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="全县有到位资金的招商引资项目14个，认定到位资金8.77亿元。其中，新建项目2个，续建项目12个。今年新批2家外资企业：滨州尤科生物科技有限公司和山东美可达电子影像有限公司。"
+            android:textColor="@color/darkgrey"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <ImageView android:id="@+id/arrow_right"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/arrow_carrot_right"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+
+</LinearLayout>

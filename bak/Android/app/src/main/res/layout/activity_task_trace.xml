@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home.unit.task.TaskTraceActivity">
+
+    <LinearLayout android:id="@+id/layout_unit"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/tv_title_tip"
+            android:layout_gravity="center_vertical"
+            android:text="责任部门："
+            android:paddingLeft="10dp"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Spinner android:id="@+id/sp_units"
+            android:paddingRight="10dp"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+    </LinearLayout>
+
+    <TextView android:background="@color/lightgray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <com.harry.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/listview"
+        android:dividerHeight="0dp"
+        android:divider="@null"
+        android:layout_marginBottom="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.harry.pulltorefresh.library.PullToRefreshListView>
+
+</LinearLayout>

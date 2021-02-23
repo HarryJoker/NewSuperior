@@ -1,0 +1,121 @@
+<resources>
+    <string name="app_name">博兴政务督查</string>
+    <string name="title_home">工作</string>
+    <string name="title_gather">统计</string>
+    <string name="title_honour">荣誉</string>
+    <string name="title_message">消息</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <array name="entrys">
+        <item>洒落的叫法是离开的放假阿什利打飞机阿克苏</item>
+        <item>水电费立刻就爱上了打飞机了</item>
+        <item>顺路快递放假阿什利大富科技萨拉的</item>
+    </array>
+
+    <array name="Units">
+        <item>请选择单位部门</item>
+        <item>民政局</item>
+        <item>气象局</item>
+        <item>国土局</item>
+        <item>警察局</item>
+        <item>法务办</item>
+        <item>审计局</item>
+        <item>督查办</item>
+        <item>张县长</item>
+        <item>张副县长</item>
+        <item>王副县长</item>
+        <item>李副县长</item>
+    </array>
+    <string name="title_activity_main">MainActivity</string>
+
+
+
+
+
+
+
+
+
+    <!--    DSS  -->
+    <string name="common_request_loading">Requsting...</string>
+    <string name="login_param_null">Param can not been null</string>
+    <string name="login_failed">Login failed</string>
+    <string name="main_exit_tips">Click back again to exit</string>
+    <string name="play_capture_success">Capture success, path:</string>
+    <string name="play_capture_failed">Capture failed</string>
+    <string name="play_back_record_not_create">Record is not created</string>
+    <string name="play_back_pause">Pause</string>
+    <string name="play_back_resume">Resume</string>
+    <string name="play_back_recording">Now is recording</string>
+    <string name="play_talk_close">Talk close</string>
+    <string name="play_talk_start">Talk start</string>
+    <string name="play_talk_failed">Talk failed</string>
+    <string name="play_record_start">Start record</string>
+    <string name="play_record_stop">Stop record, path:</string>
+    <string name="play_record_stop_tips">Stop record</string>
+    <string name="play_play">Play</string>
+    <string name="play_stop">Stop</string>
+    <string name="play_net_error">Net error</string>
+    <string name="play_talk_no_permission">Talk no permission</string>
+    <string name="device_channel_null">Channel is null</string>
+    <string name="device_get_failed">Get failed or list is null</string>
+    <string name="device_all_device">All device</string>
+    <string name="device_root">Root</string>
+    <string name="device_group_is_null">Group is null</string>
+    <string name="login_server_ip">Please Input Ip</string>
+    <string name="login_server_port">Please Input Port</string>
+    <string name="login_username">Please Input Username</string>
+    <string name="login_password">Please Input Password</string>
+    <string name="login_login">Login</string>
+    <string name="play_back_title">Playback</string>
+    <string name="play_back_pre_month">Pre</string>
+    <string name="play_back_next_month">Next</string>
+    <string name="play_item_capture">Capture</string>
+    <string name="play_item_record">Record</string>
+    <string name="play_back_item_pause">Pause</string>
+    <string name="play_item_audio">Audio</string>
+    <string name="play_item_play">Play</string>
+    <string name="play_back_item_speed_add">Speed+</string>
+    <string name="play_back_item_speed_decrease">Speed-</string>
+    <string name="play_back_item_server_record">ServerRecord</string>
+    <string name="play_back_item_device_record">DeviceRecord</string>
+    <string name="common_item_refresh">Refresh</string>
+    <string name="device_item_play_back">Playback</string>
+    <string name="play_online_title">Playonline</string>
+    <string name="play_online_talk">Talk</string>
+    <string name="play_online_cloud">Cloud</string>
+    <string name="play_online_hd">HD</string>
+    <string name="play_online_sd">SD</string>
+    <string name="play_online_fl">FL</string>
+    <string name="play_online_remove">Remove</string>
+    <string name="play_online_full">Full</string>
+    <string name="play_back_seek_cross_border">No record at this time</string>
+
+    <string name="permission_title_setting">Permission Setting</string>
+    <string name="permission_title_description">Permission Description</string>
+    <string name="permission_request_due_to_reject_never">%s permissions apply failed,please go to "Mobile-Setting" to authorize,or functions unusable</string>
+    <string name="permission_request_due_to_reject">Please grant %s permissions,or functions unusable</string>
+    <string name="permission_apply_request">To authorize</string>
+    <string name="permission_apply_setting">To set up</string>
+    <string name="permission_cancel">Cancel</string>
+    <string name="permission_failed_by_rom">Unable to access permission setting page due to your rom,please go to "Mobile-Setting"—>"Application"—>"Rights" to authorize permissions</string>
+
+    <string name="permission_calendar">Calendar、</string>
+    <string name="permission_camera">Camera、</string>
+    <string name="permission_contacts">Contacts、</string>
+    <string name="permission_location">Location、</string>
+    <string name="permission_microphone">Microphone、</string>
+    <string name="permission_phone">Phone、</string>
+    <string name="permission_sensors">Body sensors、</string>
+    <string name="permission_sms">SMS、</string>
+    <string name="permission_storage">Storage、</string>
+
+
+</resources>

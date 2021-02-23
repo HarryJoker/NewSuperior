@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="horizontal">
+
+    <cn.carbs.android.avatarimageview.library.AvatarImageView
+        android:id="@+id/lv_logo"
+        app:aiv_BoarderWidth="2dp"
+        app:aiv_TextSizeRatio="0.4"
+        app:aiv_BoarderColor="#e3e3e6"
+        app:aiv_TextColor="@color/colorPrimary"
+        app:aiv_ShowBoarder="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:maxLines="1"
+        android:layout_gravity="center_vertical"
+        android:drawableRight="@mipmap/arrow_carrot_right"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/disgray"
+        android:textSize="16sp" />
+</LinearLayout>

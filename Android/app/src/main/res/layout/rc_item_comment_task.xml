@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/dp_1"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="民生事项："
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="全县有到位资金的招商引资项目14个，认定到位资金8.77亿元。其中，新建项目2个，续建项目12个。今年新批2家外资企业：滨州尤科生物科技有限公司和山东美可达电子影像有限公司。"
+            android:textColor="@color/dimgrey"
+            android:textSize="@dimen/sp_13" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="具体描述："
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="全县有到位资金的招商引资项目14个，认定到位资金8.77亿元。其中，新建项目2个，续建项目12个。今年新批2家外资企业：滨州尤科生物科技有限公司和山东美可达电子影像有限公司。"
+            android:textColor="@color/dimgrey"
+            android:textSize="@dimen/sp_13" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_3"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总评价数："
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="王xxx"
+            android:textColor="@color/dimgrey"
+            android:textSize="@dimen/sp_13" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="好评："
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/tv_good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:text="2020-08-12 15:34:56"
+            android:textColor="@color/dimgrey"
+            android:textSize="@dimen/sp_13" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="差评："
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/tv_bad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="2020-08-12 15:34:56"
+            android:textColor="@color/dimgrey"
+            android:textSize="@dimen/sp_13" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+</LinearLayout>
+

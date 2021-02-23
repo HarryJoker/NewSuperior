@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightskyblue"
+    tools:context=".ui.unit.masses.supervise.ClueAccessFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:gravity="center_horizontal"
+                android:text="博兴县政府综合大督查征集问题线索公告"
+                android:textColor="@color/black_3a"
+                android:textSize="@dimen/sp_18" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:lineSpacingExtra="@dimen/dp_3"
+                android:text="      为做好2020年省委省政府综合大督查工作,从即日起至2020年9月10日,县委办公厅、县政府办公厅将通过政务督查手机APP或小程序,面向社会征集我县“六稳”“六保”政策措施落实方面的问题线索。重点包括:市场主体特别是中小微企业和个体工商户在复工复产、复市复业和享受相关政策支持等方面遇到的困难和问题；群众在就业创业和享受相关政策保障等方面遇到的困难和问题；有关地方和部门在“保居民就业”“保基本民生”“保市场主体”等工作落实中不担当、不作为、慢作为、乱作为等形式主义官僚主义问题。\n     县委办公厅、县政府办公厅将对问题线索汇总整理,转有关地方和部门研究处理,推动解决实际问题。对实名举报的政策落实不到位、带有普遍性和典型性的重要问题线索，进行实地核查。"
+                android:textColor="@color/color_66"
+                android:textSize="@dimen/sp_14" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="博兴县人民政府办公厅"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_horizontal"
+                    android:text="2020年9年10日"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/tv_access_clue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_margin="@dimen/dp_10"
+            android:gravity="center"
+            android:text="提交线索"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            app:rv_backgroundColor="@color/colorPrimary"
+            app:rv_backgroundPressColor="@color/colorPrimaryDark"
+            app:rv_cornerRadius="@dimen/dp_5" />
+    </LinearLayout>
+</ScrollView>

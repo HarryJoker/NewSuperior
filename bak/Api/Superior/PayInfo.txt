@@ -1,0 +1,7 @@
+
+$appid = 'wxf7f4a4e351e5b1d5';//appid必填
+$mch_id = '1525909451';//商户号必填
+
+$openid = 'oeLIB5TjxuwYU5d0f_fT1Ano4Kbs';
+apiKey = J092323JDUAyooarr828123JOSDFHOWN
+操作密码： yooar!828123

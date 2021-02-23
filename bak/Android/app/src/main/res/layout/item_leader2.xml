@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <cn.carbs.android.avatarimageview.library.AvatarImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_mayun"
+        android:layout_margin="10dp"
+        app:aiv_TextColor="@color/colorPrimary"
+        app:aiv_BoarderWidth="2dp"
+        app:aiv_ShowBoarder="true"
+        app:aiv_BoarderColor="@color/lightgray"
+        android:layout_gravity="center_horizontal" />
+    <TextView android:id="@+id/tv_name"
+        android:layout_gravity="center_horizontal"
+        android:text="张县长"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

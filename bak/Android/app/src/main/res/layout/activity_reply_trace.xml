@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="10dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".home.unit.task.NewTraceActivity">
+
+    <TextView android:id="@+id/tv_key"
+        android:text="批示内容"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout android:orientation="vertical"
+        android:background="@drawable/shape_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:paddingLeft="3dp"
+            android:paddingTop="3dp"
+            android:paddingRight="3dp"
+            android:maxLines="15"
+            android:lines="8"
+            android:gravity="left|top"
+            android:hint="请填写工作内容"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+    <TextView android:id="@+id/tv_create_click"
+        android:text="批示"
+        android:layout_marginTop="20dp"
+        android:textSize="18dp"
+        android:textColor="#ffffff"
+        android:padding="13dp"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:onClick="newTraceClick"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

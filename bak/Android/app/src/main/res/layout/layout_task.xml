@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="@dimen/dp_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView android:id="@+id/tv_category_label"
+                android:textColor="@color/lightgray"
+                android:textSize="@dimen/sp_13"
+                android:padding="@dimen/dp_5"
+                android:layout_alignParentLeft="true"
+                android:text="任务类别："
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:textSize="@dimen/sp_13"
+                android:textColor="@color/dimgrey"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_category_label"
+                android:layout_alignParentRight="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_title_label"
+                android:textColor="@color/lightgray"
+                android:textSize="@dimen/sp_13"
+                android:padding="@dimen/dp_5"
+                android:text="主要任务："
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:textSize="@dimen/sp_13"
+                android:layout_toRightOf="@id/tv_title_label"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_5"
+                android:textColor="@color/dimgrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+             android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_content_label"
+                android:textColor="@color/lightgray"
+                android:textSize="@dimen/sp_13"
+                android:padding="@dimen/dp_5"
+                android:text="具体任务："
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                 android:layout_marginRight="@dimen/dp_5"
+                android:id="@+id/tv_content"
+                android:textSize="@dimen/sp_13"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_content_label"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/dimgrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout android:id="@+id/layout_task_plan"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:id="@+id/tv_task_plan_label"
+                android:textColor="@color/lightgray"
+                android:textSize="@dimen/sp_13"
+                android:layout_width="wrap_content"
+                android:text="推进计划："
+                android:padding="@dimen/dp_5"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                 android:id="@+id/tv_plan"
+                 android:textSize="@dimen/sp_13"
+                android:layout_marginRight="@dimen/dp_5"
+                android:textColor="@color/dimgrey"
+                android:layout_toRightOf="@id/tv_task_plan_label"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout android:id="@+id/layout_taskinfo"
+            android:visibility="gone"
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:id="@+id/tv_task_info_label"
+                android:textColor="@color/lightgray"
+                android:textSize="@dimen/sp_13"
+                android:layout_width="wrap_content"
+                android:text="任务备注："
+                android:padding="@dimen/dp_5"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                 android:id="@+id/tv_task_info"
+                android:textSize="@dimen/sp_13"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/tv_task_info_label"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_5"
+                android:textColor="@color/dimgrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView android:id="@+id/tv_arrow"
+        android:text=">>"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:textSize="@dimen/sp_20"
+        android:background="#4eee"
+        android:textColor="@color/gray"
+        android:padding="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>
