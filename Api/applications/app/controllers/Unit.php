@@ -132,9 +132,12 @@ class Unit extends CA_Controller {
     }
 
      public function updateUnit($unitId = 0) {
-        $intro = $this->input->post('intro');
+        $data = $this->input->post();
         $logo = $this->makeDoUpload();
-        $this->unit_model->update_where(array('intro' => $intro, 'logo' => $logo), array('id' => $unitId));
+        if (!empty($logo)) {
+            $data['logo'] = $logo;
+        }
+        $this->unit_model->update_where($data, array('id' => $unitId));
         $unit = $this->unit_model->get($unitId);
         $this->set_content(0, '更新成功', $unit);
     }

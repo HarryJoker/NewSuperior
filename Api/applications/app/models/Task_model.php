@@ -25,7 +25,7 @@ class Task_model extends CA_Model {
      private function makeFields() {
           foreach ($this->tables as $table) {
                $result = $this->query("select column_name from information_schema.columns 
-                    where table_name='".$table['name']."' and table_schema='avatar_gov_2'");
+                    where table_name='".$table['name']."' and table_schema='avatar_superior_2021'");
                foreach ($result as $val) {
                     $fileds[] = $table['alis'].'.'.$val['column_name'] . ' as `' . $table['prefix'].$val['column_name'].'` ';
                }
@@ -120,7 +120,7 @@ class Task_model extends CA_Model {
           if ($category == 1) {
                $sql .= ' order by t.taskSerial';
           }
-
+          
           $tasks = $this->query($sql);
           return $this->makeGroupUnitTasks($tasks);
      }
