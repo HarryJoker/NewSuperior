@@ -120,7 +120,7 @@ class Task_model extends CA_Model {
           if ($category == 1) {
                $sql .= ' order by t.taskSerial';
           }
-          
+
           $tasks = $this->query($sql);
           return $this->makeGroupUnitTasks($tasks);
      }
