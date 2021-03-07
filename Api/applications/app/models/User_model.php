@@ -19,7 +19,7 @@ class User_model extends CA_Model {
 			$p = ord($s1);
 			if($p > 160){
 				$s2 = substr($zh,$i++,2);
-				$ret .= $this->getfirstchar($s2);
+				$ret .= $this->getFirstChar($s2);
 			}else{
 				$ret .= $s1;
 			}
@@ -166,10 +166,9 @@ class User_model extends CA_Model {
 
      function createUser($unitId = 0, $unitName, $rule = 0) {
      	if (!$unitId) return;
-     	var_dump($this->pinyin_long($unitName));
-     	$data = array('logo' => 'ic_avatar.png', 
+     	$data = array('logo' => 'ic_avatar.png',
      		'name' => '未设置', 
-     		'account' => 'bx'.$rule,
+			'account' => 'bxzwdc'.$this->getRandNumber(),
      		'password' => '123456', 
      		'role' => 1, 
      		'unitId' => $unitId, 
