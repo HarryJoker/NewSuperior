@@ -166,7 +166,7 @@ class User_model extends CA_Model {
 
      function createUser($unitId = 0, $unitName, $rule = 0) {
      	if (!$unitId) return;
-//     	var_dump($this->pinyin_long($unitName));
+     	var_dump($this->pinyin_long($unitName));
      	$data = array('logo' => 'ic_avatar.png', 
      		'name' => '未设置', 
      		'account' => 'bx'.$rule,
