@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '114.115.241.56',
+	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '123456',
 	'database' => 'avatar_superior_2021',
@@ -95,3 +95,26 @@ $db['default'] = array(
     'port' => '3306',
 	'save_queries' => TRUE
 );
+
+//$db['default'] = array(
+//    'dsn'	=> '',
+//    'hostname' => 'localhost',
+//    'username' => 'root',
+//    'password' => 'Bxzwdc828123',
+//    'database' => 'avatar_superior_2021',
+//    'dbdriver' => 'mysqli',
+//    'dbprefix' => 'tbl_',
+//    'pconnect' => FALSE,
+//    'db_debug' => (ENVIRONMENT !== 'production'),
+//    'cache_on' => FALSE,
+//    'cachedir' => '',
+//    'char_set' => 'utf8',
+//    'dbcollat' => 'utf8_general_ci',
+//    'swap_pre' => '',
+//    'encrypt' => FALSE,
+//    'compress' => FALSE,
+//    'stricton' => FALSE,
+//    'failover' => array(),
+//    'port' => '3306',
+//    'save_queries' => TRUE
+//);
