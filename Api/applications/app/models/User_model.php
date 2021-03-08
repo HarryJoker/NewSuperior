@@ -132,7 +132,6 @@ class User_model extends CA_Model {
 
      function createUser($unitId = 0, $unitName = '', $rule = 0, $num = 0) {
      	if (!$unitId) return;
-     	var_dump($unitName. ' first char '. 'bx'.$this->getFirstCharterBulk($unitName).$num);
      	$data = array('logo' => 'ic_avatar.png',
      		'name' => '未设置', 
 			'account' => 'bx'.$this->getFirstCharterBulk($unitName).$num,
