@@ -8,125 +8,91 @@ class User_model extends CA_Model {
      }/*}}}*/
 
 
-	//获取整条字符串所有汉字拼音首字母
-	function pinyin_long($zh){
-		$ret = "";
-		$s1 = iconv("UTF-8","GBK//IGNORE", $zh);
-		$s2 = iconv("GBK","UTF-8", $s1);
-		if($s2 == $zh){$zh = $s1;}
-		for($i = 0; $i < strlen($zh); $i++){
-			$s1 = substr($zh,$i,1);
-			$p = ord($s1);
-			if($p > 160){
-				$s2 = substr($zh,$i++,2);
-				$ret .= $this->getFirstChar($s2);
-			}else{
-				$ret .= $s1;
+	private function getFirstCharterBulk($str, $is_lowercase = true) {
+		$return = '';
+		/* 拆分字符串 */
+		$chars = $this->str_split_unicode($str);
+		foreach ($chars as $k => $v) {
+			/* 获取单个拼音首字母 */
+			$english_char = $this->getFirstCharterSingle($v);
+			if($is_lowercase){
+				$english_char = strtolower($english_char);
 			}
+			$return .= $english_char;
 		}
-		return $ret;
+		return $return;
 	}
 
-	//获取单个汉字拼音首字母。注意:此处不要纠结。汉字拼音是没有以U和V开头的
-	/**
-	 * 取汉字的第一个字的首字母
-	 * @param string $str
-	 * @return string|null
-	 */
-	function getFirstChar($str) {
+	private function getFirstCharterSingle($str) {
 		if (empty($str)) {
 			return '';
 		}
-
-		$fir = $fchar = ord($str[0]);
-		if ($fchar >= ord('A') && $fchar <= ord('z')) {
-			return strtoupper($str[0]);
-		}
-
-		$s1 = @iconv('UTF-8', 'gb2312//IGNORE', $str);
-		$s2 = @iconv('gb2312', 'UTF-8', $s1);
+		$fchar = ord($str{0});
+		if ($fchar >= ord('A') && $fchar <= ord('z'))
+			return strtoupper($str{0});
+		$s1 = iconv('UTF-8', 'gb2312', $str);
+		$s2 = iconv('gb2312', 'UTF-8', $s1);
 		$s = $s2 == $str ? $s1 : $str;
-		if (!isset($s[0]) || !isset($s[1])) {
-			return '';
-		}
-
-		$asc = ord($s[0]) * 256 + ord($s[1]) - 65536;
-
-		if (is_numeric($str)) {
-			return $str;
-		}
-
-		if (($asc >= -20319 && $asc <= -20284) || $fir == 'A') {
+		$asc = ord($s{0}) * 256 + ord($s{1}) - 65536;
+		if ($asc >= -20319 && $asc <= -20284)
 			return 'A';
-		}
-		if (($asc >= -20283 && $asc <= -19776) || $fir == 'B') {
+		if ($asc >= -20283 && $asc <= -19776)
 			return 'B';
-		}
-		if (($asc >= -19775 && $asc <= -19219) || $fir == 'C') {
+		if ($asc >= -19775 && $asc <= -19219)
 			return 'C';
-		}
-		if (($asc >= -19218 && $asc <= -18711) || $fir == 'D') {
+		if ($asc >= -19218 && $asc <= -18711)
 			return 'D';
-		}
-		if (($asc >= -18710 && $asc <= -18527) || $fir == 'E') {
+		if ($asc >= -18710 && $asc <= -18527)
 			return 'E';
-		}
-		if (($asc >= -18526 && $asc <= -18240) || $fir == 'F') {
+		if ($asc >= -18526 && $asc <= -18240)
 			return 'F';
-		}
-		if (($asc >= -18239 && $asc <= -17923) || $fir == 'G') {
+		if ($asc >= -18239 && $asc <= -17923)
 			return 'G';
-		}
-		if (($asc >= -17922 && $asc <= -17418) || $fir == 'H') {
+		if ($asc >= -17922 && $asc <= -17418)
 			return 'H';
-		}
-		if (($asc >= -17417 && $asc <= -16475) || $fir == 'J') {
+		if ($asc >= -17417 && $asc <= -16475)
 			return 'J';
-		}
-		if (($asc >= -16474 && $asc <= -16213) || $fir == 'K') {
+		if ($asc >= -16474 && $asc <= -16213)
 			return 'K';
-		}
-		if (($asc >= -16212 && $asc <= -15641) || $fir == 'L') {
+		if ($asc >= -16212 && $asc <= -15641)
 			return 'L';
-		}
-		if (($asc >= -15640 && $asc <= -15166) || $fir == 'M') {
+		if ($asc >= -15640 && $asc <= -15166)
 			return 'M';
-		}
-		if (($asc >= -15165 && $asc <= -14923) || $fir == 'N') {
+		if ($asc >= -15165 && $asc <= -14923)
 			return 'N';
-		}
-		if (($asc >= -14922 && $asc <= -14915) || $fir == 'O') {
+		if ($asc >= -14922 && $asc <= -14915)
 			return 'O';
-		}
-		if (($asc >= -14914 && $asc <= -14631) || $fir == 'P') {
+		if ($asc >= -14914 && $asc <= -14631)
 			return 'P';
-		}
-		if (($asc >= -14630 && $asc <= -14150) || $fir == 'Q') {
+		if ($asc >= -14630 && $asc <= -14150)
 			return 'Q';
-		}
-		if (($asc >= -14149 && $asc <= -14091) || $fir == 'R') {
+		if ($asc >= -14149 && $asc <= -14091)
 			return 'R';
-		}
-		if (($asc >= -14090 && $asc <= -13319) || $fir == 'S') {
+		if ($asc >= -14090 && $asc <= -13319)
 			return 'S';
-		}
-		if (($asc >= -13318 && $asc <= -12839) || $fir == 'T') {
+		if ($asc >= -13318 && $asc <= -12839)
 			return 'T';
-		}
-		if (($asc >= -12838 && $asc <= -12557) || $fir == 'W') {
+		if ($asc >= -12838 && $asc <= -12557)
 			return 'W';
-		}
-		if (($asc >= -12556 && $asc <= -11848) || $fir == 'X') {
+		if ($asc >= -12556 && $asc <= -11848)
 			return 'X';
-		}
-		if (($asc >= -11847 && $asc <= -11056) || $fir == 'Y') {
+		if ($asc >= -11847 && $asc <= -11056)
 			return 'Y';
-		}
-		if (($asc >= -11055 && $asc <= -10247) || $fir == 'Z') {
+		if ($asc >= -11055 && $asc <= -10247)
 			return 'Z';
+		return null;
+	}
+	/* 拆分字符串 */
+	private function str_split_unicode($str, $l = 0) {
+		if ($l > 0) {
+			$ret = array();
+			$len = mb_strlen($str, "UTF-8");
+			for ($i = 0; $i < $len; $i += $l) {
+				$ret[] = mb_substr($str, $i, $l, "UTF-8");
+			}
+			return $ret;
 		}
-
-		return '';
+		return preg_split("//u", $str, -1, PREG_SPLIT_NO_EMPTY);
 	}
 
 
@@ -153,22 +119,22 @@ class User_model extends CA_Model {
      	if (!count($unit)) return;
      	
      	if ($unit['role'] >= 1 && $unit['role'] <= 3) {
-     		$this->createUser($unitId, $unit['name'], 1);
+     		$this->createUser($unitId, $unit['name'], 1, 1);
      		return;
      	}
      	if ($unit['role'] == 4) {
-     		$this->createUser($unitId, $unit['name'], 1);
+     		$this->createUser($unitId, $unit['name'], 1, 1);
 //     		$this->createUser($unitId, 2);
-     		$this->createUser($unitId, $unit['name'], 3);
+     		$this->createUser($unitId, $unit['name'], 3, 2);
      	}
      }
 
 
-     function createUser($unitId = 0, $unitName, $rule = 0) {
+     function createUser($unitId = 0, $unitName = '', $rule = 0, $num = 0) {
      	if (!$unitId) return;
      	$data = array('logo' => 'ic_avatar.png',
      		'name' => '未设置', 
-			'account' => 'bxzwdc'.$this->getRandNumber(),
+			'account' => 'bx'.$this->getFirstCharterBulk($unitName) + $num,
      		'password' => '123456', 
      		'role' => 1, 
      		'unitId' => $unitId, 
