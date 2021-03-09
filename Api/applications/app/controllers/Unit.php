@@ -82,6 +82,9 @@ class Unit extends CA_Controller {
                     'logo' => $this->input->post('logo'), 
                     'parentid' => $this->input->post('parentid'),
                     'role' => $this->input->post('role'));
+        if (empty($data['logo'])) {
+            $data['logo'] = 'unit.png';
+        }
         $id = $this->unit_model->create_id($data);
         $this->load->model('user_model');
         $this->user_model->autoGenerateUnitUsers($id);

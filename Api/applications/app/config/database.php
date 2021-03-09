@@ -78,6 +78,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '123456',
+//    'password' => 'Bxzwdc828123',
 	'database' => 'avatar_superior_2021',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => 'tbl_',

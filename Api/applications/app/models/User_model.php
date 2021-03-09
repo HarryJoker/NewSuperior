@@ -134,7 +134,7 @@ class User_model extends CA_Model {
      	if (!$unitId) return;
      	$data = array('logo' => 'ic_avatar.png',
      		'name' => '未设置', 
-			'account' => 'bx'.$this->getFirstCharterBulk($unitName).$num,
+			'account' => 'bxx'.$this->getFirstCharterBulk($unitName).$num,
      		'password' => '123456', 
      		'role' => 1, 
      		'unitId' => $unitId, 
