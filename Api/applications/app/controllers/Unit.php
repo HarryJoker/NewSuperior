@@ -140,6 +140,9 @@ class Unit extends CA_Controller {
         if (!empty($logo)) {
             $data['logo'] = $logo;
         }
+        if (empty($data['logo'])) {
+            $data['logo'] = 'unit.png';
+        }
         $this->unit_model->update_where($data, array('id' => $unitId));
         $unit = $this->unit_model->get($unitId);
         $this->set_content(0, '更新成功', $unit);

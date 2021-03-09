@@ -437,8 +437,10 @@ class Trace extends CA_Controller {
                 if(strlen($traces[$i]['attachments'])) {
                     $imageNames = explode(',', $traces[$i]['attachments']);
                     foreach ($imageNames as $value) {
-                        $images[] = array('name' => $value, 'url' => 'http://api.superior.yooar.com/uploads/'.$value);
-                        $imageUrls[] = 'http://api.superior.yooar.com/uploads/'.$value;
+//                        $images[] = array('name' => $value, 'url' => 'http://ducha.boxing.gov.cn/uploads/'.$value);
+//                        $imageUrls[] = 'http://ducha.boxing.gov.cn/uploads/'.$value;
+                        $images[] = array('name' => $value, 'url' => $this ->config->item('attachment_url').''.$value);
+                        $imageUrls[] = $this ->config->item('attachment_url').''.$value;
                     }
                 }
                 $traces[$i]['images'] = $images;
