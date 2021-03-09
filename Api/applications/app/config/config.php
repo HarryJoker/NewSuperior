@@ -39,6 +39,7 @@ $config['index_page'] = 'index.php';
 
 
 $config['attachment_url'] = 'http://api.anter.yooar.com/uploads/';
+//$config['attachment_url'] = 'http://ducha.boxing.gov.cn/uploads/';
 
 
 /*
