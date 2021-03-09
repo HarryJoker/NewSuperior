@@ -74,7 +74,7 @@ class User extends CA_Controller {
     public function resetUserPassword($userId = 0)
     {/*{{{*/
         if (!empty($userId)) {
-            $this->user_model->update_where(array('password' => '123123'), array('id'=> $userId));
+            $this->user_model->update_where(array('password' => '123456'), array('id'=> $userId));
             $this->set_content(0, '重置成功', array('id' => '0'));
         } else{
             $this->set_content(-1, '更新失败', array('id' => '0'));
