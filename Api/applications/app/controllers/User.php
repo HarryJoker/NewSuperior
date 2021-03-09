@@ -69,6 +69,16 @@ class User extends CA_Controller {
 
     }/*}}}*/
 
+    //删除用户
+    public function delete($userId = 0)
+    {/*{{{*/
+        if (!empty($userId)) {
+            $this->user_model->delete(array('id'=> $userId));
+            $this->set_content(0, '重置成功', array('id' => '0'));
+        } else{
+            $this->set_content(-1, '更新失败', array('id' => '0'));
+        }
+    }/*}}}*/
 
     //重置用户密码
     public function resetUserPassword($userId = 0)
