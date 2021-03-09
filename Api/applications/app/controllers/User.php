@@ -70,6 +70,31 @@ class User extends CA_Controller {
     }/*}}}*/
 
 
+    //重置用户密码
+    public function resetUserPassword($userId = 0)
+    {/*{{{*/
+        if (!empty($userId)) {
+            $this->user_model->update_where(array('password' => '123123'), array('id'=> $userId));
+            $this->set_content(0, '重置成功', array('id' => '0'));
+        } else{
+            $this->set_content(-1, '更新失败', array('id' => '0'));
+        }
+    }/*}}}*/
+
+
+    //修改用户密码
+    public function modifyUserPassword($userId = 0)
+    {/*{{{*/
+        $password = $this->input->post('password');
+        if (!empty($userId)) {
+            $this->user_model->update_where(array('password' => $password), array('id'=> $userId));
+            $this->set_content(0, '修改成功', array('id' => '0'));
+        } else{
+            $this->set_content(-1, '更新失败', array('id' => '0'));
+        }
+    }/*}}}*/
+
+
         //更新个人信息
     public function updateUnit($id = 0)
     {/*{{{*/
