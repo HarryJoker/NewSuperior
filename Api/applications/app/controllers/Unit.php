@@ -96,7 +96,7 @@ class Unit extends CA_Controller {
     public function delete($id = 0)
     {
         $result = $this->unit_model->delete(array('id'=>$id));
-        $this->load_model('user_model');
+        $this->load->model('user_model');
         $this->user_model->delete(array('unitId'=> $id));
         $this->set_content($id > 0 ? 0 : -1, $id > 0 ? '删除成功' : '创建失败', array('result' => $result));
     }
