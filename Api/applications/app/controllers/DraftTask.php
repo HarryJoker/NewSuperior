@@ -11,7 +11,7 @@ class DraftTask extends CA_Controller {
         $data = $this->input->post();
         $rows = $this->drafttask_model->create_batch($data);
         $this->set_content($rows > 0 ? 0 : -1, $rows > 0 ? '创建成功' : '创建失败', array('rows' => $rows));
-     }
+    }
 
 
     public function getDraftTasks($draftId = 0) {
